@@ -56,6 +56,120 @@
           ]
         }
       ]
+    },
+    {
+      "fullName": "Matar Hgever",
+      "imgUrl": "https://www.example.com/ottolenghi.jpg",
+      "description": "Matar Hagever is a famous Israeli chef, restaurateur, and cookbook author known for his innovative Mediterranean-style cuisine.",
+      "restaurants": [
+        {
+          "name": "Matar is in the hood",
+          "dishes": [
+            {
+              "name": "matar the king",
+              "imgUrl": "https://www.example.com/eggplant-haloumi.jpg",
+              "rating": 5
+            },
+            {
+              "name": "matar the prince",
+              "imgUrl": "https://www.example.com/carrot-ginger-soup.jpg",
+              "rating": 4
+            },
+            {
+              "name": "matar the queen",
+              "imgUrl": "https://www.example.com/green-shakshuka.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Roasted Tomatoes & Feta Salad",
+              "imgUrl": "https://www.example.com/roasted-tomatoes-feta.jpg",
+              "rating": 3
+            }
+          ]
+        },
+        {
+          "name": "NOPI",
+          "dishes": [
+            {
+              "name": "Smoked Aubergine",
+              "imgUrl": "https://www.example.com/smoked-aubergine.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Sweet Potato & Halloumi Tacos",
+              "imgUrl": "https://www.example.com/sweet-potato-halloumi.jpg",
+              "rating": 5
+            },
+            {
+              "name": "Crispy Squid Salad",
+              "imgUrl": "https://www.example.com/crispy-squid-salad.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Grilled Pork Chops with Apple & Fennel",
+              "imgUrl": "https://www.example.com/pork-chops-apple-fennel.jpg",
+              "rating": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fullName": "Assaf Katz",
+      "imgUrl": "https://www.example.com/ottolenghi.jpg",
+      "description": "Assaf Katz is a famous Israeli chef, restaurateur, and cookbook author known for his innovative Mediterranean-style cuisine.",
+      "restaurants": [
+        {
+          "name": "Ottolenghi",
+          "dishes": [
+            {
+              "name": "Eggplant & Haloumi Skewers",
+              "imgUrl": "https://www.example.com/eggplant-haloumi.jpg",
+              "rating": 5
+            },
+            {
+              "name": "Carrot & Ginger Soup",
+              "imgUrl": "https://www.example.com/carrot-ginger-soup.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Green Shakshuka",
+              "imgUrl": "https://www.example.com/green-shakshuka.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Roasted Tomatoes & Feta Salad",
+              "imgUrl": "https://www.example.com/roasted-tomatoes-feta.jpg",
+              "rating": 3
+            }
+          ]
+        },
+        {
+          "name": "NOPI",
+          "dishes": [
+            {
+              "name": "Smoked Aubergine",
+              "imgUrl": "https://www.example.com/smoked-aubergine.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Sweet Potato & Halloumi Tacos",
+              "imgUrl": "https://www.example.com/sweet-potato-halloumi.jpg",
+              "rating": 5
+            },
+            {
+              "name": "Crispy Squid Salad",
+              "imgUrl": "https://www.example.com/crispy-squid-salad.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Grilled Pork Chops with Apple & Fennel",
+              "imgUrl": "https://www.example.com/pork-chops-apple-fennel.jpg",
+              "rating": 3
+            }
+          ]
+        }
+      ]
     }
   ]
 }
