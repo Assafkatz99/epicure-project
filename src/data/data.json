@@ -1,0 +1,61 @@
+{
+  "chefs": [
+    {
+      "fullName": "Meir Adoni",
+      "imgUrl": "https://www.example.com/adoni.jpg",
+      "description": "Meir Adoni is a renowned Israeli chef, known for his innovative fusion cuisine that blends traditional Middle Eastern flavors with contemporary cooking techniques.",
+      "restaurants": [
+        {
+          "name": "Nur",
+          "dishes": [
+            {
+              "name": "Lamb & Fig Tagine",
+              "imgUrl": "https://www.example.com/lamb-fig-tagine.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Halibut with Za'atar Butter",
+              "imgUrl": "https://www.example.com/halibut-zaatar.jpg",
+              "rating": 5
+            },
+            {
+              "name": "Mushroom & Pomegranate Salad",
+              "imgUrl": "https://www.example.com/mushroom-pomegranate.jpg",
+              "rating": 3
+            },
+            {
+              "name": "Grilled Octopus",
+              "imgUrl": "https://www.example.com/grilled-octopus.jpg",
+              "rating": 4
+            }
+          ]
+        },
+        {
+          "name": "Luchiano",
+          "dishes": [
+            {
+              "name": "Wild Boar Ragu",
+              "imgUrl": "https://www.example.com/wild-boar-ragu.jpg",
+              "rating": 4
+            },
+            {
+              "name": "Tagliatelle with Truffle Butter",
+              "imgUrl": "https://www.example.com/tagliatelle-truffle.jpg",
+              "rating": 5
+            },
+            {
+              "name": "Roasted Chicken with Herbs",
+              "imgUrl": "https://www.example.com/roasted-chicken.jpg",
+              "rating": 3
+            },
+            {
+              "name": "Risotto with Porcini Mushrooms",
+              "imgUrl": "https://www.example.com/risotto-porcini.jpg",
+              "rating": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
