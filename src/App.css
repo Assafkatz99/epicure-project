@@ -1,38 +1,24 @@
 .App {
-  text-align: center;
+  height: 100vh;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+@font-face {
+  font-family: 'HelveticaNeue-Thin';
+  src: url('./fonts/HelveticaNeue-Thin.ttf') format('truetype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  src: url('./fonts/HelveticaNeue-Light.ttf') format('truetype');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: 'HelveticaNeue-Medium';
+  src: url('./fonts/HelveticaNeue-Medium.ttf') format('truetype');
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: 'Helvetica-Neu-Bold';
+  src: url('./fonts/Helvetica-Neu-Bold.ttf') format('truetype');
 }
