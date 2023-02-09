@@ -4,6 +4,7 @@ import "./homepage.css";
 import Navbar from "../navbar/Navbar";
 import Hero from "./hp-components/hero-component/Hero";
 import Popular_restaurant from "./hp-components/popular-restaurant/Popular_restaurant";
+import Popular_dishes from "./hp-components/popular-dishes/Popular_dishes";
 
 
 const Homepage: React.FC = () => {
@@ -11,6 +12,7 @@ const Homepage: React.FC = () => {
         <Navbar />
         <Hero />
         <Popular_restaurant />
+        <Popular_dishes />
         </>
       )
     }

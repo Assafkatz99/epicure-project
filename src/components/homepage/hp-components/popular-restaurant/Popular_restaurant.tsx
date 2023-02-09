@@ -1,13 +1,18 @@
 import React from "react";
-import Restaurant_card from "../../../restaurant-card/Restaurant_card";
+import Card from "../card/Card";
 import "./Popular_restaurant.css";
 
 
 const Popular_restaurant: React.FC = () => {
-      return (<div className="popular_restaurant">
-            <Restaurant_card img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" chef="dsadsa" rating={5} name="dsadsa" />
-            <Restaurant_card img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" chef="dsadsa" rating={5} name="dsadsa" />
-            <Restaurant_card img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" chef="dsadsa" rating={5} name="dsadsa" />
+      return (
+      <div className="popular_restaurant">
+      <span>POPULAR RESTAURANT IN EPICURE:</span>
+      <div className="popular_restaurant_cards">
+          <Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"2"} />
+          <Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"2"} />
+          <Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"2"} />
+      </div>
+      <button>All Restaurant {">>"}</button>
         </div>
       )
     }

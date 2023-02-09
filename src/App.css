@@ -4,16 +4,16 @@
 }
 h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 1rem;
 }
 h2 {
   margin: 0;
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 h3 {
   margin: 0;
-  font-family: "HelveticaNeue-Medium";
-  font-size: 40px;
+  font-family: "HelveticaNeue-Light";
+  font-size: 1.8rem;
 }
 button {
   font-size: 16px;
