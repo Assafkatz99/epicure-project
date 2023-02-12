@@ -26,7 +26,7 @@ button:hover{
     display: flex;
     box-sizing: border-box;
     align-items: center;
-    padding: 0px 5vw;
+    padding: 0px 8vw;
 
     background-color: white;
     z-index: 10;

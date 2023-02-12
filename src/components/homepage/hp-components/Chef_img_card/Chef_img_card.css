@@ -1,0 +1,45 @@
+
+.chef_card{
+    position: relative;
+
+
+    height: 26vw;
+    width: 33vw;
+
+}
+
+.chef_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.chef_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFFCC;
+    padding: 15px 0px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    font-size: 2.7vw;
+    
+    font-family: "HelveticaNeue-Light";
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    height: 50px;
+    transition: 0.5s;
+    
+
+}
+.chef_card:hover{cursor: pointer;}
+.chef_card:hover .chef_name {
+    cursor: pointer;
+    padding-bottom: 40px; 
+}

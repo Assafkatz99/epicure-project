@@ -9,8 +9,8 @@ const Popular_restaurant: React.FC = () => {
       <span>POPULAR RESTAURANT IN EPICURE:</span>
       <div className="popular_restaurant_cards">
           <Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"2"} />
-          <Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"2"} />
-          <Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"2"} />
+          <Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"4"} />
+          <Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"5"} />
       </div>
       <button>All Restaurant {">>"}</button>
         </div>
