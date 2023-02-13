@@ -15,12 +15,7 @@ h3 {
   font-family: "HelveticaNeue-Light";
   font-size: 1.8rem;
 }
-button {
-  font-size: 16px;
-  color: white;
-  background-color: #000000;
-  padding: 34px 14px;
-}
+
 @media screen and(max-width:500px) {
   h1 {
     font-size: 24px;

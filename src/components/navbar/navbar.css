@@ -33,6 +33,8 @@ button:hover{
 
     position: sticky;
     top: 0px;
+
+    border-bottom: #97979787 0.2px solid;
 }
 
 .navbar div{

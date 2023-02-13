@@ -1,8 +1,8 @@
 .card{
     display: flex;
     flex-direction: column;
-
-    width: 27%;
+    text-align: center;
+    width: 27vw;
 }
 .card h3{
     font-size: 3vw;
