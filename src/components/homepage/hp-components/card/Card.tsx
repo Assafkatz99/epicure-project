@@ -10,7 +10,7 @@ const Card: React.FC<ICard> = (props) => {
           <h3>{props.name}</h3>
           {props.icons ? <section className="icons_section">{ props.icons?.map((icon:string) => <img className="icon" src={icon} />) } </section>: null }
           <h2>{props.chefName ? props.chefName : props.dishDescription}</h2>
-          {props.rating ? <section>{<img className="rating" src={"/assets/icons/rating_svgs/rate-" + props.rating + ".svg"} />}</section> : null }
+          {props.rating ? <section>{<img className="rating" src={"/assets/icons/rating_svgs/rate-" + props.rating.toString() + ".svg"} />}</section> : null }
           {props.price ? <div className="pricing"><hr /><p>₪{props.price}</p><hr /></div> : null}
         </div>
       </div>

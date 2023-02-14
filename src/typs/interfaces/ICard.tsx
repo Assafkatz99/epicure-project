@@ -1,7 +1,7 @@
 interface ICard {
 img: string,
 name: string,
-rating?: string,
+rating?: number,
 chefName?:string,
 dishDescription?: string,
 icons?: string[],

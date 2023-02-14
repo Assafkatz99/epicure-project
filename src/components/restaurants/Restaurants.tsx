@@ -33,7 +33,7 @@ const Restaurants: React.FC = () => {
         (() => {
           let  restaurants = [];
           for (let i = 0; i < 10; i++) {
-            restaurants.push(<Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"5"} />);
+            restaurants.push(<Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={5} />);
           }
           return restaurants;
         })()
