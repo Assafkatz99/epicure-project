@@ -21,6 +21,7 @@ button:hover{
     cursor: pointer;
 }
 
+
 .navbar{
     height: 64px;
     display: flex;
@@ -82,6 +83,7 @@ button:hover{
     background-position: 99%;
     width: 410px;
     border: 0.5px black solid;
+    cursor: text;
 }
    
 
@@ -91,17 +93,14 @@ button:hover{
 
 
 
-.menu-left button {
+.menu-left a {
     position: relative;
   }
-.menu-left button:hover {
-    padding-bottom: 2px ;
-  }
   
-  .menu-left button:before {
+.notActive:before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     right: 0;
     height: 1.8px;
@@ -111,11 +110,22 @@ button:hover{
     transition: transform 0.17s ease-in-out;
   }
   
-  .menu-left button:hover:before {
+.notActive:hover:before {
     transform: scaleX(1);
   }
   
 
+.underline{
+    border-bottom: #de9000 2.8px solid;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.notActive{
+    all: unset;
+    cursor: pointer;
+}
 
   
   

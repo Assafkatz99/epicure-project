@@ -3,6 +3,7 @@ import { White_button } from "../../typs/buttons/Styled_buttons";
 import Card from "../homepage/hp-components/card/Card";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
+import data from "../../data/data.json"
 import "./restaurants.css";
 
 
@@ -12,11 +13,11 @@ const Restaurants: React.FC = () => {
 
         <div className="filters_first_row">
           <div className="buttons_first_row">
-            <White_button>All</White_button>
-            <White_button>New</White_button>
-            <White_button>Most Popular</White_button>
-            <White_button>Open Now</White_button>
-            <White_button>Map View</White_button>
+            <White_button name="all">All</White_button>
+            <White_button name="new">New</White_button>
+            <White_button name="most_popular">Most Popular</White_button>
+            <White_button name="open_now">Open Now</White_button>
+            <White_button name="map_view">Map View</White_button>
           </div>
         </div>
 
@@ -29,16 +30,17 @@ const Restaurants: React.FC = () => {
         </div>
 
         <div className="restaurants_grid">
-        {
-        (() => {
-          let  restaurants = [];
-          for (let i = 0; i < 10; i++) {
-            restaurants.push(<Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={5} />);
-          }
-          return restaurants;
-        })()
-      }
-        </div>
+  {data.restaurants.map((restaurant) => (
+    <Card
+      class="rest"
+      img={restaurant.img_url}
+      name={restaurant.name}
+      chefName={data.chefs.find((chef) => chef.restaurant_ids.includes(restaurant.id))?.first_name + " " + data.chefs.find((chef) => chef.restaurant_ids.includes(restaurant.id))?.last_name}
+      rating={restaurant.rating}
+    />
+  ))}
+</div>
+
 
       <Footer />
         </>

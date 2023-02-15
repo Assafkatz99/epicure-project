@@ -1,105 +1,274 @@
 {
-  "chefs": [
-    {
-      "chef_id": 1,
-      "chef_first_name": "Thomas",
-      "chef_last_name": "Keller",
-      "chef_about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world. He is the chef-owner of several world-renowned restaurants, including The French Laundry and Per Se. Keller is a multiple James Beard Award winner and has been awarded multiple Michelin stars.",
-      "chef_img": "https://www.example.com/thomas_keller.jpg",
-      "chef_rests_ids": [
-        1,
-        2
-      ]
-    },
-    {
-      "chef_id": 2,
-      "chef_first_name": "Gordon",
-      "chef_last_name": "Ramsay",
-      "chef_about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality. He is best known for his appearances on the reality TV show Hell's Kitchen, where he is often portrayed as a strict and demanding taskmaster. Ramsay is the owner of several highly-successful restaurants around the world, including Restaurant Gordon Ramsay in London.",
-      "chef_img": "https://www.example.com/gordon_ramsay.jpg",
-      "chef_rests_ids": [
-        3,
-        4
-      ]
-    }
-  ],
-  "restuarants": [
-    {
-      "rest_id": 1,
-      "isFavorite": true,
-      "rest_name": "The French Laundry",
-      "rest_img": "https://www.example.com/the_french_laundry.jpg",
-      "rest_hours": [
-        "9:00 AM",
-        "9:00 PM"
-      ],
-      "rest_address": "6640 Washington St, Yountville, CA 94599",
-      "rest_rating": 5,
-      "rest_dishes_ids": [
-        1,
-        2
-      ]
-    },
-    {
-      "rest_id": 2,
-      "isFavorite": true,
-      "rest_name": "Per Se",
-      "rest_img": "https://www.example.com/per_se.jpg",
-      "rest_hours": [
-        "11:00 AM",
-        "9:00 PM"
-      ],
-      "rest_address": "10 Columbus Circle, New York, NY 10019",
-      "rest_rating": 4,
-      "rest_dishes_ids": [
-        3,
-        4
-      ]
-    },
-    {
-      "rest_id": 3,
-      "isFavorite": true,
-      "rest_name": "Per Se",
-      "rest_img": "https://www.example.com/per_se.jpg",
-      "rest_hours": [
-        "11:00 AM",
-        "9:00 PM"
-      ],
-      "rest_address": "10 Columbus Circle, New York, NY 10019",
-      "rest_rating": 4,
-      "rest_dishes_ids": [
-        3,
-        4
-      ]
-    }
-  ],
+    "chef_of_the_week_id" : 1,
+    "chefs": [
+      {
+        "id": 1,
+        "first_name": "Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [2,3,4,5,6,1]
+      },
+      {
+        "id": 2,
+        "first_name": "Gordon",
+        "last_name": "Ramsay",
+        "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [7,8,9,10,11]
+      },
+      {
+        "id": 3,
+        "first_name": "Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": []
+      },
+      {
+        "id": 4,
+        "first_name": "Gordon",
+        "last_name": "Ramsay",
+        "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": []
+      },
+      {
+        "id": 5,
+        "first_name": "Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": []
+      },
+      {
+        "id": 6,
+        "first_name": "Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": []
+      },
+      {
+        "id": 7,
+        "first_name": "Gordon",
+        "last_name": "Ramsay",
+        "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": []
+      },
+      {
+        "id": 8,
+        "first_name": "Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": []
+      },
+      {
+        "id": 9,
+        "first_name": "Gordon",
+        "last_name": "Ramsay",
+        "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": []
+      },
+      {
+        "id": 10,
+        "first_name": "Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": []
+      }
+    ],
+  
+    "restaurants": [
+      {
+        "id": 1,
+        "is_favorite": true,
+        "name": "The French Laundry",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          "9:00 AM",
+          "9:00 PM"
+        ],
+        "address": "6640 Washington St, Yountville, CA 94599",
+        "rating": 5,
+        "dish_ids": [1, 2],
+        "chef_id": 1
+      },
+      {
+        "id": 2,
+        "is_favorite": true,
+        "name": "Per Se",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          "11:00 AM",
+          "9:00 PM"
+        ],
+        "address": "10 Columbus Circle, New York, NY 10019",
+        "rating": 4,
+        "dish_ids": [3, 4],
+        "chef_id": 1
+      },
+      {
+        "id": 3,
+        "is_favorite": true,
+        "name": "Gordon Ramsay Steak",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          "11:00 AM",
+          "10:00 PM"
+        ],
+        "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
+        "rating": 4,
+        "dish_ids": [5, 6],
+        "chef_id": 2
+      },
+      {
+        "id": 4,
+        "is_favorite": true,
+        "name": "The French Laundry",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          "9:00 AM",
+          "9:00 PM"
+        ],
+        "address": "6640 Washington St, Yountville, CA 94599",
+        "rating": 5,
+        "dish_ids": [1, 2],
+        "chef_id": 1
+      },
+      {
+        "id": 5,
+        "is_favorite": true,
+        "name": "Per Se",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          "11:00 AM",
+          "9:00 PM"
+        ],
+        "address": "10 Columbus Circle, New York, NY 10019",
+        "rating": 4,
+        "dish_ids": [3, 4],
+        "chef_id": 1
+      },
+      {
+        "id": 6,
+        "is_favorite": true,
+        "name": "Gordon Ramsay Steak",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          "11:00 AM",
+          "10:00 PM"
+        ],
+        "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
+        "rating": 4,
+        "dish_ids": [5, 6],
+        "chef_id": 2
+      },
+      {
+        "id": 7,
+        "is_favorite": true,
+        "name": "The French Laundry",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          "9:00 AM",
+          "9:00 PM"
+        ],
+        "address": "6640 Washington St, Yountville, CA 94599",
+        "rating": 5,
+        "dish_ids": [1, 2],
+        "chef_id": 1
+      },
+      {
+        "id": 8,
+        "is_favorite": true,
+        "name": "Per Se",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          "11:00 AM",
+          "9:00 PM"
+        ],
+        "address": "10 Columbus Circle, New York, NY 10019",
+        "rating": 4,
+        "dish_ids": [3, 4],
+        "chef_id": 1
+      },
+      {
+        "id": 9,
+        "is_favorite": true,
+        "name": "Gordon Ramsay Steak",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          "11:00 AM",
+          "10:00 PM"
+        ],
+        "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
+        "rating": 4,
+        "dish_ids": [5, 6],
+        "chef_id": 2
+      },
+      {
+        "id": 10,
+        "is_favorite": true,
+        "name": "The French Laundry",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          "9:00 AM",
+          "9:00 PM"
+        ],
+        "address": "6640 Washington St, Yountville, CA 94599",
+        "rating": 5,
+        "dish_ids": [1, 2],
+        "chef_id": 1
+      },
+      {
+        "id": 11,
+        "is_favorite": true,
+        "name": "Per Se",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          "11:00 AM",
+          "9:00 PM"
+        ],
+        "address": "10 Columbus Circle, New York, NY 10019",
+        "rating": 4,
+        "dish_ids": [3, 4],
+        "chef_id": 1
+      }
+    ]
+  ,
   "dishes": [
     {
-      "dish_id": 1,
-      "dish_name": "Pesto Pasta",
-      "dish_img": "",
-      "dish_ingredients": [
+      "id": 1,
+      "name": "Pesto Pasta",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
         "Penne",
         "Basil Pesto",
         "Parmesan Cheese",
         "Olive Oil"
       ],
-      "dish_price": 11,
-      "isSpicy": false,
-      "isVegan": false,
-      "isVegitarian": true,
-      "dish_sides": [
+      "price": 11,
+      "icons":{
+        "isSpicy": true,
+        "isVegan": false,
+        "isVegitarian": true
+      },
+      "sides": [
         "Caesar Salad"
       ],
-      "dish_changes": [
+      "changes": [
 
       ]
     },
     {
-      "dish_id": 2,
-      "dish_name": "Tacos Al Pastor",
-      "dish_img": "",
-      "dish_ingredients": [
+      "id": 2,
+      "name": "Tacos Al Pastor",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
         "Corn Tortillas",
         "Pork",
         "Pineapple",
@@ -107,46 +276,50 @@
         "Cilantro",
         "Lime"
       ],
-      "dish_price": 14,
-      "isSpicy": true,
-      "isVegan": false,
-      "isVegitarian": false,
-      "dish_sides": [
+      "price": 14,
+      "icons":{
+        "isSpicy": false,
+        "isVegan": true,
+        "isVegitarian": false
+      },
+      "sides": [
         "Refried Beans",
         "Spanish Rice"
       ],
-      "dish_changes": [
+      "changes": [
 
       ]
     },
     {
-      "dish_id": 3,
-      "dish_name": "Grilled Chicken",
-      "dish_img": "",
-      "dish_ingredients": [
+      "id": 3,
+      "name": "Grilled Chicken",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
         "Chicken Breast",
         "Salt",
         "Pepper",
         "Garlic",
         "Lemon"
       ],
-      "dish_price": 12,
-      "isSpicy": false,
-      "isVegan": false,
-      "isVegitarian": false,
-      "dish_sides": [
+      "price": 12,
+      "icons":{
+        "isSpicy": true,
+        "isVegan": true,
+        "isVegitarian": true
+      },
+      "sides": [
         "Rice",
         "Roasted Vegetables"
       ],
-      "dish_changes": [
+      "changes": [
 
       ]
     },
     {
-      "dish_id": 4,
-      "dish_name": "Vegetable Stir Fry",
-      "dish_img": "",
-      "dish_ingredients": [
+      "id": 4,
+      "name": "Vegetable Stir Fry",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
         "Broccoli",
         "Carrots",
         "Onions",
@@ -154,11 +327,13 @@
         "Soy Sauce",
         "Garlic"
       ],
-      "dish_price": 10,
-      "isSpicy": false,
-      "isVegan": true,
-      "isVegitarian": true,
-      "dish_sides": [
+      "price": 10,
+      "icons":{
+        "isSpicy": false,
+        "isVegan": false,
+        "isVegitarian": true
+      },
+      "sides": [
         "Rice",
         "Egg Rolls"
       ],
@@ -167,10 +342,10 @@
       ]
     },
     {
-      "dish_id": 5,
-      "dish_name": "Spaghetti Bolognese",
-      "dish_img": "",
-      "dish_ingredients": [
+      "id": 5,
+      "name": "Spaghetti Bolognese",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
         "Spaghetti",
         "Ground Beef",
         "Tomato Sauce",
@@ -178,14 +353,16 @@
         "Garlic",
         "Red Wine"
       ],
-      "dish_price": 13,
-      "isSpicy": false,
-      "isVegan": false,
-      "isVegitarian": false,
-      "dish_sides": [
+      "price": 13,
+      "icons":{
+        "isSpicy": false,
+        "isVegan": false,
+        "isVegitarian": false
+      },
+      "sides": [
         "Garlic Bread"
       ],
-      "dish_changes": [
+      "changes": [
 
       ]
     }

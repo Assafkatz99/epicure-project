@@ -10,10 +10,10 @@ const Popular_restaurant: React.FC = () => {
       <div className="popular_restaurant_cards">
       
       {
-    data.restuarants.filter(rest => rest.isFavorite === true)
+    data.restaurants.filter(rest => rest.is_favorite === true)
     .slice(0, 3)
     .map((rest) => (
-      <Card class="rest" img={rest.rest_img} name={rest.rest_name} rating={rest.rest_rating} />
+      <Card class="rest" img={rest.img_url} name={rest.name} rating={rest.rating} />
     ))
 }
 
