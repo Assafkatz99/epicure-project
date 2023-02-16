@@ -90,13 +90,13 @@
         "name": "The French Laundry",
         "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
         "hours": [
-          "9:00 AM",
-          "9:00 PM"
+          9,
+          21
         ],
         "address": "6640 Washington St, Yountville, CA 94599",
         "rating": 5,
         "dish_ids": [1, 2],
-        "chef_id": 1
+        "opening_year" : 2023
       },
       {
         "id": 2,
@@ -104,13 +104,13 @@
         "name": "Per Se",
         "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
         "hours": [
-          "11:00 AM",
-          "9:00 PM"
+          11,
+          21
         ],
         "address": "10 Columbus Circle, New York, NY 10019",
         "rating": 4,
         "dish_ids": [3, 4],
-        "chef_id": 1
+        "opening_year" : 2020
       },
       {
         "id": 3,
@@ -118,13 +118,13 @@
         "name": "Gordon Ramsay Steak",
         "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
         "hours": [
-          "11:00 AM",
-          "10:00 PM"
+          11,
+          22
         ],
         "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
         "rating": 4,
         "dish_ids": [5, 6],
-        "chef_id": 2
+        "opening_year" : 2010
       },
       {
         "id": 4,
@@ -132,13 +132,13 @@
         "name": "The French Laundry",
         "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
         "hours": [
-          "9:00 AM",
-          "9:00 PM"
+          9,
+          21
         ],
         "address": "6640 Washington St, Yountville, CA 94599",
         "rating": 5,
         "dish_ids": [1, 2],
-        "chef_id": 1
+        "opening_year" : 2018
       },
       {
         "id": 5,
@@ -146,13 +146,13 @@
         "name": "Per Se",
         "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
         "hours": [
-          "11:00 AM",
-          "9:00 PM"
+          11,
+          21
         ],
         "address": "10 Columbus Circle, New York, NY 10019",
         "rating": 4,
         "dish_ids": [3, 4],
-        "chef_id": 1
+        "opening_year" : 2013
       },
       {
         "id": 6,
@@ -160,13 +160,13 @@
         "name": "Gordon Ramsay Steak",
         "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
         "hours": [
-          "11:00 AM",
-          "10:00 PM"
+          11,
+          22
         ],
         "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
         "rating": 4,
         "dish_ids": [5, 6],
-        "chef_id": 2
+        "opening_year" : 2023
       },
       {
         "id": 7,
@@ -174,13 +174,13 @@
         "name": "The French Laundry",
         "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
         "hours": [
-          "9:00 AM",
-          "9:00 PM"
+          9,
+          12
         ],
         "address": "6640 Washington St, Yountville, CA 94599",
         "rating": 5,
         "dish_ids": [1, 2],
-        "chef_id": 1
+        "opening_year" : 2023
       },
       {
         "id": 8,
@@ -188,13 +188,13 @@
         "name": "Per Se",
         "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
         "hours": [
-          "11:00 AM",
-          "9:00 PM"
+          11,
+          21
         ],
         "address": "10 Columbus Circle, New York, NY 10019",
         "rating": 4,
         "dish_ids": [3, 4],
-        "chef_id": 1
+        "opening_year" : 2023
       },
       {
         "id": 9,
@@ -202,13 +202,13 @@
         "name": "Gordon Ramsay Steak",
         "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
         "hours": [
-          "11:00 AM",
-          "10:00 PM"
+          11,
+          22
         ],
         "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
         "rating": 4,
         "dish_ids": [5, 6],
-        "chef_id": 2
+        "opening_year" : 2023
       },
       {
         "id": 10,
@@ -216,13 +216,13 @@
         "name": "The French Laundry",
         "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
         "hours": [
-          "9:00 AM",
-          "9:00 PM"
+          9,
+          21
         ],
         "address": "6640 Washington St, Yountville, CA 94599",
         "rating": 5,
         "dish_ids": [1, 2],
-        "chef_id": 1
+        "opening_year" : 2023
       },
       {
         "id": 11,
@@ -230,13 +230,13 @@
         "name": "Per Se",
         "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
         "hours": [
-          "11:00 AM",
-          "9:00 PM"
+          11,
+          9
         ],
         "address": "10 Columbus Circle, New York, NY 10019",
         "rating": 4,
         "dish_ids": [3, 4],
-        "chef_id": 1
+        "opening_year" : 2023
       }
     ]
   ,

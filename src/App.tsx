@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from './components/homepage/Homepage';
 import Restaurants from './components/restaurants/Restaurants';
 import Chefs from './components/chefs/Chefs';
+import SingleRestaurant from './components/restaurants/restaurants_components/SingleRestaurant';
 
 function App() {
   return (<>
@@ -14,6 +15,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Homepage />}  ></Route>
       <Route path="/Restaurants" element={<Restaurants />} ></Route>
+      <Route path="/Restaurants/:single" element={<SingleRestaurant />} ></Route>
       <Route path="/Chefs" element={<Chefs />}></Route>
       </Routes>
     </BrowserRouter>

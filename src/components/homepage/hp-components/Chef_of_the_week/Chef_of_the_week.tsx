@@ -24,7 +24,7 @@ const Chef_of_the_week: React.FC = () => {
         <div className="cotw_cards">
   {cotw?.restaurant_ids
     .map((rest_id) => data.restaurants.find((rest) => rest.id === rest_id))
-    .slice(0, 5) 
+    .slice(0, 4) 
     .map((restaurant) => (
       <Small_rest_card
         rest_img={restaurant?.img_url ? restaurant?.img_url : ""}

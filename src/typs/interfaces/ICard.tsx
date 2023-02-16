@@ -7,6 +7,7 @@ dishDescription?: string[],
 icons?: Icons,
 price?: number,
 class: string,
+onclick?: any
 }
 
 interface Icons{

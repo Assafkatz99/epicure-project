@@ -4,7 +4,7 @@ import "./Card.css";
 
 const Card: React.FC<ICard> = (props) => {
   return (
-    <div className={`card ${props.class}`}>
+    <div className={`card ${props.class}`} onClick={props.onclick}>
       <img className="card_img" src={props.img} alt="rest/dish_img" />
       <div className="card_bottom_div">
         <h3>{props.name}</h3>
