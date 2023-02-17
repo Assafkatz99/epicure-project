@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
             Restaurants
           </NavLink>
           <NavLink
-            to="/Chefs"
+            to="/chefs"
             className={({isActive}) => (isActive ? "underline" : "notActive")}
           >
             Chefs

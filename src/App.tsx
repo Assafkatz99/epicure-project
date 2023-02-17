@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -13,10 +12,10 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Homepage />}  ></Route>
-      <Route path="/Restaurants" element={<Restaurants />} ></Route>
-      <Route path="/Restaurants/:single" element={<SingleRestaurant />} ></Route>
-      <Route path="/Chefs" element={<Chefs />}></Route>
+      <Route path="/" element={<Homepage />}></Route>
+      <Route path="/restaurants" element={<Restaurants />}></Route>
+      <Route path="/restaurants/:single" element={<SingleRestaurant />}></Route>
+      <Route path="/chefs" element={<Chefs />}></Route>
       </Routes>
     </BrowserRouter>
     </>

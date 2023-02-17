@@ -91,6 +91,7 @@ const Restaurants: React.FC = () => {
 
       <div className="restaurants_grid">
         {restaurants.map((restaurant: any) => (<>
+          <NavLink to={`/restaurants/${restaurant.id}`}>
           <Card class="rest"
             img={restaurant.img_url}
             name={restaurant.name}
@@ -104,7 +105,7 @@ const Restaurants: React.FC = () => {
               )?.last_name
             }
             rating={restaurant.rating}
-          /><NavLink to={`/restaurants/${restaurant.id}`}>hello</NavLink></>
+          /></NavLink></>
         ))}
       </div>
 

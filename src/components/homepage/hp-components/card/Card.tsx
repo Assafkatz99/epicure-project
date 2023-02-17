@@ -18,7 +18,7 @@ const Card: React.FC<ICard> = (props) => {
                   <img
                     key={index}
                     className="icon"
-                    src={`assets/icons/dishes_types_icons/${icon[0]}.svg`}
+                    src={`/assets/icons/dishes_types_icons/${icon[0]}.svg`}
                     alt="icons"
                   />
                 ) : null

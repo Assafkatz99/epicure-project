@@ -7,7 +7,7 @@
         "last_name": "Keller",
         "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": [2,3,4,5,6,1]
+        "restaurant_ids": [1,2,3,4,5]
       },
       {
         "id": 2,
@@ -15,7 +15,7 @@
         "last_name": "Ramsay",
         "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": [7,8,9,10,11]
+        "restaurant_ids": [2]
       },
       {
         "id": 3,
@@ -23,7 +23,7 @@
         "last_name": "Keller",
         "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": []
+        "restaurant_ids": [3]
       },
       {
         "id": 4,
@@ -31,7 +31,7 @@
         "last_name": "Ramsay",
         "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": []
+        "restaurant_ids": [4]
       },
       {
         "id": 5,
@@ -39,7 +39,7 @@
         "last_name": "Keller",
         "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": []
+        "restaurant_ids": [5]
       },
       {
         "id": 6,
@@ -47,7 +47,7 @@
         "last_name": "Keller",
         "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": []
+        "restaurant_ids": [6]
       },
       {
         "id": 7,
@@ -55,7 +55,7 @@
         "last_name": "Ramsay",
         "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": []
+        "restaurant_ids": [7]
       },
       {
         "id": 8,
@@ -63,7 +63,7 @@
         "last_name": "Keller",
         "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": []
+        "restaurant_ids": [8]
       },
       {
         "id": 9,
@@ -71,7 +71,7 @@
         "last_name": "Ramsay",
         "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": []
+        "restaurant_ids": [9]
       },
       {
         "id": 10,
@@ -79,7 +79,7 @@
         "last_name": "Keller",
         "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": []
+        "restaurant_ids": [10]
       }
     ],
   
@@ -123,7 +123,7 @@
         ],
         "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
         "rating": 4,
-        "dish_ids": [5, 6],
+        "dish_ids": [1,2,3,4,5,6],
         "opening_year" : 2010
       },
       {
@@ -165,7 +165,7 @@
         ],
         "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
         "rating": 4,
-        "dish_ids": [5, 6],
+        "dish_ids": [1],
         "opening_year" : 2023
       },
       {
@@ -207,7 +207,7 @@
         ],
         "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
         "rating": 4,
-        "dish_ids": [5, 6],
+        "dish_ids": [1],
         "opening_year" : 2023
       },
       {

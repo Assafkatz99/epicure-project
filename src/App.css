@@ -16,6 +16,13 @@ h3 {
   font-size: 1.8rem;
 }
 
+a {
+  all: unset;
+}
+a:hover {
+  cursor: pointer;
+}
+  
 @media screen and(max-width:500px) {
   h1 {
     font-size: 24px;
