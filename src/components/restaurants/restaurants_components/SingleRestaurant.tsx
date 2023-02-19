@@ -65,7 +65,7 @@ const SingleRestaurant: React.FC = () => {
         </div>
         </div>
         <Footer />
-        <Modal />
+        {/* <Modal /> */}
         </>
       }
             </>

@@ -11,8 +11,8 @@ import { useNavigate, NavLink } from "react-router-dom";
 
 const Restaurants: React.FC = () => {
     const dispatch = useDispatch();
-    const restaurants = useSelector ((state:any) => {state.restaurants.initialValue})
-    const chefs = useSelector ((state:any) => {state.chefs.initialValue})
+    const restaurants:any = useSelector ((state:any) => state.restaurants.initialValue)
+    const chefs:any = useSelector ((state:any) => state.chefs.initialValue)
     const [boldName, setBoldName] = useState("all")  
   useEffect(() => {
     dispatch(filter(boldName));
@@ -72,6 +72,7 @@ const Restaurants: React.FC = () => {
             Map View
           </White_button>
         </div>
+        </div>
 
         <div className="filters_second_row">
           <div className="buttons_second_row">
@@ -98,7 +99,6 @@ const Restaurants: React.FC = () => {
       </div>
 
       <Footer />
-        </div>
 
       </>
   )
