@@ -4,6 +4,21 @@
     text-align: center;
     width: 27vw;
 }
+.card:hover{
+    cursor: pointer;
+}
+.small_dish{
+    width: 18vw;
+}
+
+.small_dish .card_bottom_div h3{
+    font-size: 1.7vw ;
+}
+.small_dish .card_bottom_div h2{
+    font-size: 1.2vw ;
+}
+
+
 .card h3{
     font-size: 3vw;
 }
@@ -22,7 +37,6 @@
     padding: 5px;
 
     position: relative;
-
 }
 
 .rest .card_bottom_div{
@@ -30,6 +44,9 @@
 }
 .dish .card_bottom_div{
     height: 24vw;
+}
+.small_dish .card_bottom_div{
+    height: 16.7vw;
 }
 
 .card_bottom_div div{
@@ -58,6 +75,10 @@
 
 .dish .card_img{
     height: 21vw;
+}
+
+.small_dish .card_img{
+    height: 11.8vw;
 }
 
 .rating, .icon{

@@ -4,6 +4,10 @@
     flex-direction: column;
 }
 
+.rest_small_card:hover{
+    cursor: pointer;
+}
+
 .rest_small_card img{
     height: 16vw;
     width: 16vw;

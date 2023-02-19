@@ -1,5 +1,250 @@
 {
+<<<<<<< Updated upstream
   "chefs": [
+=======
+    "chef_of_the_week_id" : 1,
+    "chefs": [
+      {
+        "id": 1,
+        "first_name": "1 Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [1]
+      },
+      {
+        "id": 2,
+        "first_name": "2 Gordon",
+        "last_name": "Ramsay",
+        "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [2]
+      },
+      {
+        "id": 3,
+        "first_name": "3 Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [3]
+      },
+      {
+        "id": 4,
+        "first_name": "4 Gordon",
+        "last_name": "Ramsay",
+        "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [4]
+      },
+      {
+        "id": 5,
+        "first_name": "5 Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [5]
+      },
+      {
+        "id": 6,
+        "first_name": "6 Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [6]
+      },
+      {
+        "id": 7,
+        "first_name": "7 Gordon",
+        "last_name": "Ramsay",
+        "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [7]
+      },
+      {
+        "id": 8,
+        "first_name": "8 Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [8]
+      },
+      {
+        "id": 9,
+        "first_name": "9 Gordon",
+        "last_name": "Ramsay",
+        "about": "Gordon Ramsay is a Scottish chef, restaurateur, and television personality...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [9]
+      },
+      {
+        "id": 10,
+        "first_name": "10 Thomas",
+        "last_name": "Keller",
+        "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
+        "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
+        "restaurant_ids": [10,11]
+      }
+    ],
+  
+    "restaurants": [
+      {
+        "id": 1,
+        "is_favorite": true,
+        "name": "The French Laundry",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          9,
+          21
+        ],
+        "address": "6640 Washington St, Yountville, CA 94599",
+        "rating": 5,
+        "dish_ids": [1, 2,1,2,3,1,2,1,2,1,4],
+        "opening_year" : 2023
+      },
+      {
+        "id": 2,
+        "is_favorite": true,
+        "name": "Per Se",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          11,
+          21
+        ],
+        "address": "10 Columbus Circle, New York, NY 10019",
+        "rating": 4,
+        "dish_ids": [3, 4],
+        "opening_year" : 2020
+      },
+      {
+        "id": 3,
+        "is_favorite": true,
+        "name": "Gordon Ramsay Steak",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          11,
+          22
+        ],
+        "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
+        "rating": 4,
+        "dish_ids": [1,2,3,4,5,6],
+        "opening_year" : 2010
+      },
+      {
+        "id": 4,
+        "is_favorite": true,
+        "name": "The French Laundry",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          9,
+          21
+        ],
+        "address": "6640 Washington St, Yountville, CA 94599",
+        "rating": 5,
+        "dish_ids": [1, 2],
+        "opening_year" : 2018
+      },
+      {
+        "id": 5,
+        "is_favorite": true,
+        "name": "Per Se",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          11,
+          21
+        ],
+        "address": "10 Columbus Circle, New York, NY 10019",
+        "rating": 4,
+        "dish_ids": [3, 4],
+        "opening_year" : 2013
+      },
+      {
+        "id": 6,
+        "is_favorite": true,
+        "name": "Gordon Ramsay Steak",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          11,
+          22
+        ],
+        "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
+        "rating": 4,
+        "dish_ids": [1],
+        "opening_year" : 2023
+      },
+      {
+        "id": 7,
+        "is_favorite": true,
+        "name": "The French Laundry",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          9,
+          12
+        ],
+        "address": "6640 Washington St, Yountville, CA 94599",
+        "rating": 5,
+        "dish_ids": [1, 2,1,1,1,1,1],
+        "opening_year" : 2023
+      },
+      {
+        "id": 8,
+        "is_favorite": true,
+        "name": "Per Se",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          11,
+          21
+        ],
+        "address": "10 Columbus Circle, New York, NY 10019",
+        "rating": 4,
+        "dish_ids": [3, 4],
+        "opening_year" : 2023
+      },
+      {
+        "id": 9,
+        "is_favorite": true,
+        "name": "Gordon Ramsay Steak",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          11,
+          22
+        ],
+        "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
+        "rating": 4,
+        "dish_ids": [1],
+        "opening_year" : 2023
+      },
+      {
+        "id": 10,
+        "is_favorite": true,
+        "name": "The French Laundry",
+        "img_url": "https://previews.123rf.com/images/natavkusidey/natavkusidey1507/natavkusidey150700286/42738819-school-lunch-box-for-kids-with-food-in-the-form-of-funny-faces.jpg",
+        "hours": [
+          9,
+          21
+        ],
+        "address": "6640 Washington St, Yountville, CA 94599",
+        "rating": 5,
+        "dish_ids": [1, 2],
+        "opening_year" : 2023
+      },
+      {
+        "id": 11,
+        "is_favorite": true,
+        "name": "Per Se",
+        "img_url": "https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM=",
+        "hours": [
+          11,
+          9
+        ],
+        "address": "10 Columbus Circle, New York, NY 10019",
+        "rating": 4,
+        "dish_ids": [3, 4],
+        "opening_year" : 2023
+      }
+    ]
+  ,
+  "dishes": [
+>>>>>>> Stashed changes
     {
       "fullName": "Meir Adoni",
       "imgUrl": "https://www.example.com/adoni.jpg",
