@@ -12,12 +12,13 @@ import { NavLink } from "react-router-dom";
 
 const Restaurants: React.FC = () => {
   const [boldName, setBoldName] = useState("all");
+  const dispatch = useDispatch();
+  const restaurants = useSelector((state: any) => state.restaurants.value);
+  const chefs= useSelector((state: any) => state.chefs.initialValue);
+
   useEffect(() => {
     dispatch(filter(boldName));
   }, [boldName]);
-  const dispatch = useDispatch();
-  const restaurants = useSelector((state: any) => state.restaurants.value);
-
   return (
     <>
       <Navbar />
@@ -90,23 +91,21 @@ const Restaurants: React.FC = () => {
       </div>
 
       <div className="restaurants_grid">
-        {restaurants.map((restaurant: any) => (<>
+        {restaurants.map((restaurant: any) => {
+         const chef = chefs.find((chef:any) => chef.restaurant_ids.includes(restaurant.id) )
+         const chef_name = `${chef?.first_name} ${chef?.last_name}`
+        return(<>
           <NavLink to={`/restaurants/${restaurant.id}`}>
           <Card class="rest"
             img={restaurant.img_url}
             name={restaurant.name}
             chefName={
-              data.chefs.find((chef) =>
-                chef.restaurant_ids.includes(restaurant.id)
-              )?.first_name +
-              " " +
-              data.chefs.find((chef) =>
-                chef.restaurant_ids.includes(restaurant.id)
-              )?.last_name
+              
+              chef_name
             }
             rating={restaurant.rating}
           /></NavLink></>
-        ))}
+        )})}
       </div>
 
       <Footer />

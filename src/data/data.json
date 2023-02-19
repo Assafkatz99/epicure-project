@@ -7,7 +7,7 @@
         "last_name": "Keller",
         "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
-        "restaurant_ids": [1,2,3,4,5]
+        "restaurant_ids": [1,2,3,4,5, 11]
       },
       {
         "id": 2,
@@ -179,7 +179,7 @@
         ],
         "address": "6640 Washington St, Yountville, CA 94599",
         "rating": 5,
-        "dish_ids": [1, 2],
+        "dish_ids": [1, 2,1,1,1,1,1],
         "opening_year" : 2023
       },
       {

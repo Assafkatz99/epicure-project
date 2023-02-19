@@ -25,9 +25,12 @@ const SingleRestaurant: React.FC = () => {
         <Navbar />
         <div className="rest_details">
         <img src={specific_rest.img_url} alt="rest_img" />
+          <div className="chef_n_rest_name">
           <h3>{specific_rest.name}</h3>
-          <h2>{chef_name}</h2>
-          <h1>{(specific_rest.hours[0] < new Date().getHours() && specific_rest.hours[1] > new Date().getHours()) ? "Open now" : "closed" }</h1>
+            <h2>{chef_name}</h2>
+          </div>
+            <h1>{(specific_rest.hours[0] < new Date().getHours() && specific_rest.hours[1] > new Date().getHours()) ? "Open now" : "closed" }</h1>
+
           <div className="single_rest_filters">
             <White_button>Breakfast</White_button>
             <White_button>lunch</White_button>
