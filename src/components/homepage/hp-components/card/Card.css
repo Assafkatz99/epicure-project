@@ -22,16 +22,16 @@
 .card h3{
     font-size: 3vw;
 }
-.card h2{
-    font-size: 1.5vw;
+.card h2 {
+  font-size: 1.5vw;
 }
 
-.card_bottom_div{
-    background-color: #F9F4EA;
+.card_bottom_div {
+  background-color: #f9f4ea;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
     gap: 15px;
     padding: 5px;
@@ -39,42 +39,41 @@
     position: relative;
 }
 
-.rest .card_bottom_div{
-    height: 12vw;
+.rest .card_bottom_div {
+  height: 12vw;
 }
-.dish .card_bottom_div{
-    height: 24vw;
+.dish .card_bottom_div {
+  height: 24vw;
 }
 .small_dish .card_bottom_div{
     height: 16.7vw;
 }
 
-.card_bottom_div div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    
+.card_bottom_div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
-.card_bottom_div hr{
-    all: unset;
-    border-bottom: black 1px solid;
-    width: 25%;
+.card_bottom_div hr {
+  all: unset;
+  border-bottom: black 1px solid;
+  width: 25%;
 }
 
-.card_img{
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+.card_img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.rest .card_img{
-    height: 16vw;
+.rest .card_img {
+  height: 16vw;
 }
 
-.dish .card_img{
-    height: 21vw;
+.dish .card_img {
+  height: 21vw;
 }
 
 .small_dish .card_img{
@@ -87,18 +86,18 @@
 }
 
 .card div p {
-    font-size: 1.5vw ;
+  font-size: 1.5vw;
 }
 
-.pricing{
-    width: 99%;
-    position: absolute;
-    bottom: 10px;
-    left: 0px;
+.pricing {
+  width: 99%;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
 }
 
-.icons_section{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.icons_section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }

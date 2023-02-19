@@ -3,22 +3,12 @@ import { White_button } from "../../typs/buttons/Styled_buttons";
 import Card from "../homepage/hp-components/card/Card";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
-<<<<<<< Updated upstream
 import "./restaurants.css";
 
-=======
-
-import "./restaurants.css";
-import { useDispatch, useSelector } from "react-redux";
-import { filter } from "../../store/slicers/restaurantsSlicer";
-import { useNavigate, NavLink } from "react-router-dom";
->>>>>>> Stashed changes
 
 const Restaurants: React.FC = () => {
       return (<>
         <Navbar />
-
-<<<<<<< Updated upstream
         <div className="filters_first_row">
           <div className="buttons_first_row">
             <White_button>All</White_button>
@@ -27,7 +17,6 @@ const Restaurants: React.FC = () => {
             <White_button>Open Now</White_button>
             <White_button>Map View</White_button>
           </div>
-=======
   useEffect(() => {
     dispatch(filter(boldName));
   }, [boldName]);
@@ -97,19 +86,6 @@ const Restaurants: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< Updated upstream
-        <div className="restaurants_grid">
-        {
-        (() => {
-          let  restaurants = [];
-          for (let i = 0; i < 10; i++) {
-            restaurants.push(<Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"5"} />);
-          }
-          return restaurants;
-        })()
-      }
-        </div>
-=======
       <div className="restaurants_grid">
         {restaurants.map((restaurant: any) => {
          const chef = chefs.find((chef:any) => chef.restaurant_ids.includes(restaurant.id) )
@@ -125,9 +101,19 @@ const Restaurants: React.FC = () => {
         )
         })}
       </div>
->>>>>>> Stashed changes
 
       <Footer />
+=======
+        <div className="sorting_menu">
+          
+          </div> 
+        
+        {/* <Filters /> */}
+
+        
+
+        {/* <Footer /> */}
+>>>>>>> Stashed changes
         </>
       )
     }
