@@ -11,7 +11,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 
 const Restaurants: React.FC = () => {
     const dispatch = useDispatch();
-    const restaurants:any = useSelector ((state:any) => state.restaurants.initialValue)
+    const restaurants:any = useSelector ((state:any) => state.restaurants.value)
     const chefs:any = useSelector ((state:any) => state.chefs.initialValue)
     const [boldName, setBoldName] = useState("all")  
   useEffect(() => {
