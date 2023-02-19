@@ -1,7 +1,5 @@
 {
-<<<<<<< Updated upstream
   "chefs": [
-=======
     "chef_of_the_week_id" : 1,
     "chefs": [
       {
@@ -83,6 +81,7 @@
         "about": "Chef Thomas Keller is one of the most highly-regarded chefs in the world...",
         "img_url": "https://media.istockphoto.com/id/1369920192/photo/chef-presenting-a-plate-of-food.jpg?b=1&s=170667a&w=0&k=20&c=5Pg68hwW09ke2lQAVCd5VyZCARI6NGKT4vWoV01CW04=",
         "restaurant_ids": [10,11]
+
       }
     ],
   
@@ -244,176 +243,130 @@
     ]
   ,
   "dishes": [
->>>>>>> Stashed changes
+
     {
-      "fullName": "Meir Adoni",
-      "imgUrl": "https://www.example.com/adoni.jpg",
-      "description": "Meir Adoni is a renowned Israeli chef, known for his innovative fusion cuisine that blends traditional Middle Eastern flavors with contemporary cooking techniques.",
-      "restaurants": [
-        {
-          "name": "Nur",
-          "dishes": [
-            {
-              "name": "Lamb & Fig Tagine",
-              "imgUrl": "https://www.example.com/lamb-fig-tagine.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Halibut with Za'atar Butter",
-              "imgUrl": "https://www.example.com/halibut-zaatar.jpg",
-              "rating": 5
-            },
-            {
-              "name": "Mushroom & Pomegranate Salad",
-              "imgUrl": "https://www.example.com/mushroom-pomegranate.jpg",
-              "rating": 3
-            },
-            {
-              "name": "Grilled Octopus",
-              "imgUrl": "https://www.example.com/grilled-octopus.jpg",
-              "rating": 4
-            }
-          ]
-        },
-        {
-          "name": "Luchiano",
-          "dishes": [
-            {
-              "name": "Wild Boar Ragu",
-              "imgUrl": "https://www.example.com/wild-boar-ragu.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Tagliatelle with Truffle Butter",
-              "imgUrl": "https://www.example.com/tagliatelle-truffle.jpg",
-              "rating": 5
-            },
-            {
-              "name": "Roasted Chicken with Herbs",
-              "imgUrl": "https://www.example.com/roasted-chicken.jpg",
-              "rating": 3
-            },
-            {
-              "name": "Risotto with Porcini Mushrooms",
-              "imgUrl": "https://www.example.com/risotto-porcini.jpg",
-              "rating": 4
-            }
-          ]
-        }
+      "id": 1,
+      "name": "Pesto Pasta",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
+        "Penne",
+        "Basil Pesto",
+        "Parmesan Cheese",
+        "Olive Oil"
+      ],
+      "price": 11,
+      "icons":{
+        "isSpicy": true,
+        "isVegan": false,
+        "isVegitarian": true
+      },
+      "sides": [
+        "Caesar Salad"
+      ],
+      "changes": [
+
       ]
     },
     {
-      "fullName": "Matar Hgever",
-      "imgUrl": "https://www.example.com/ottolenghi.jpg",
-      "description": "Matar Hagever is a famous Israeli chef, restaurateur, and cookbook author known for his innovative Mediterranean-style cuisine.",
-      "restaurants": [
-        {
-          "name": "Matar is in the hood",
-          "dishes": [
-            {
-              "name": "matar the king",
-              "imgUrl": "https://www.example.com/eggplant-haloumi.jpg",
-              "rating": 5
-            },
-            {
-              "name": "matar the prince",
-              "imgUrl": "https://www.example.com/carrot-ginger-soup.jpg",
-              "rating": 4
-            },
-            {
-              "name": "matar the queen",
-              "imgUrl": "https://www.example.com/green-shakshuka.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Roasted Tomatoes & Feta Salad",
-              "imgUrl": "https://www.example.com/roasted-tomatoes-feta.jpg",
-              "rating": 3
-            }
-          ]
-        },
-        {
-          "name": "NOPI",
-          "dishes": [
-            {
-              "name": "Smoked Aubergine",
-              "imgUrl": "https://www.example.com/smoked-aubergine.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Sweet Potato & Halloumi Tacos",
-              "imgUrl": "https://www.example.com/sweet-potato-halloumi.jpg",
-              "rating": 5
-            },
-            {
-              "name": "Crispy Squid Salad",
-              "imgUrl": "https://www.example.com/crispy-squid-salad.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Grilled Pork Chops with Apple & Fennel",
-              "imgUrl": "https://www.example.com/pork-chops-apple-fennel.jpg",
-              "rating": 3
-            }
-          ]
-        }
+      "id": 2,
+      "name": "Tacos Al Pastor",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
+        "Corn Tortillas",
+        "Pork",
+        "Pineapple",
+        "Onions",
+        "Cilantro",
+        "Lime"
+      ],
+      "price": 14,
+      "icons":{
+        "isSpicy": false,
+        "isVegan": true,
+        "isVegitarian": false
+      },
+      "sides": [
+        "Refried Beans",
+        "Spanish Rice"
+      ],
+      "changes": [
+
       ]
     },
     {
-      "fullName": "Assaf Katz",
-      "imgUrl": "https://www.example.com/ottolenghi.jpg",
-      "description": "Assaf Katz is a famous Israeli chef, restaurateur, and cookbook author known for his innovative Mediterranean-style cuisine.",
-      "restaurants": [
-        {
-          "name": "Ottolenghi",
-          "dishes": [
-            {
-              "name": "Eggplant & Haloumi Skewers",
-              "imgUrl": "https://www.example.com/eggplant-haloumi.jpg",
-              "rating": 5
-            },
-            {
-              "name": "Carrot & Ginger Soup",
-              "imgUrl": "https://www.example.com/carrot-ginger-soup.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Green Shakshuka",
-              "imgUrl": "https://www.example.com/green-shakshuka.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Roasted Tomatoes & Feta Salad",
-              "imgUrl": "https://www.example.com/roasted-tomatoes-feta.jpg",
-              "rating": 3
-            }
-          ]
-        },
-        {
-          "name": "NOPI",
-          "dishes": [
-            {
-              "name": "Smoked Aubergine",
-              "imgUrl": "https://www.example.com/smoked-aubergine.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Sweet Potato & Halloumi Tacos",
-              "imgUrl": "https://www.example.com/sweet-potato-halloumi.jpg",
-              "rating": 5
-            },
-            {
-              "name": "Crispy Squid Salad",
-              "imgUrl": "https://www.example.com/crispy-squid-salad.jpg",
-              "rating": 4
-            },
-            {
-              "name": "Grilled Pork Chops with Apple & Fennel",
-              "imgUrl": "https://www.example.com/pork-chops-apple-fennel.jpg",
-              "rating": 3
-            }
-          ]
-        }
+      "id": 3,
+      "name": "Grilled Chicken",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
+        "Chicken Breast",
+        "Salt",
+        "Pepper",
+        "Garlic",
+        "Lemon"
+      ],
+      "price": 12,
+      "icons":{
+        "isSpicy": true,
+        "isVegan": true,
+        "isVegitarian": true
+      },
+      "sides": [
+        "Rice",
+        "Roasted Vegetables"
+      ],
+      "changes": [
+
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Vegetable Stir Fry",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
+        "Broccoli",
+        "Carrots",
+        "Onions",
+        "Mushrooms",
+        "Soy Sauce",
+        "Garlic"
+      ],
+      "price": 10,
+      "icons":{
+        "isSpicy": false,
+        "isVegan": false,
+        "isVegitarian": true
+      },
+      "sides": [
+        "Rice",
+        "Egg Rolls"
+      ],
+      "dish_changes": [
+
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Spaghetti Bolognese",
+      "img_url": "https://media.istockphoto.com/id/862629000/photo/sunglasses-lettuce.jpg?s=612x612&w=0&k=20&c=6LBFQSfIfdFVzZRN_xvPNxSjL1QPVyJiaFQgCNe06-Y=",
+      "ingredients": [
+        "Spaghetti",
+        "Ground Beef",
+        "Tomato Sauce",
+        "Onions",
+        "Garlic",
+        "Red Wine"
+      ],
+      "price": 13,
+      "icons":{
+        "isSpicy": false,
+        "isVegan": false,
+        "isVegitarian": false
+      },
+      "sides": [
+        "Garlic Bread"
+      ],
+      "changes": [
+
       ]
     }
   ]

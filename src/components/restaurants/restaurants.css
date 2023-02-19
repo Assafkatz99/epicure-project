@@ -32,7 +32,6 @@
 .restaurants_grid{
     display: grid;    
     padding: 30px 8vw;
-    width: min-content;
     gap: 2.5vw 1.5vw ;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: min-content;

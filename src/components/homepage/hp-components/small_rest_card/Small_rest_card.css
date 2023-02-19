@@ -11,6 +11,7 @@
 .rest_small_card img{
     height: 16vw;
     width: 16vw;
+    object-fit: cover;
 }
 
 .botton_small_card_div{

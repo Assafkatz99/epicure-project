@@ -1,9 +1,10 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
+  const [showUnderLine, setShowUnderLine] = useState<boolean>(false);
   return (
     <div className="navbar">
       <button
@@ -16,20 +17,18 @@ const Navbar: React.FC = () => {
       </button>
       <div className="menu">
         <div className="menu-left">
-          <button
-            onClick={() => {
-              navigate("/Restaurants");
-            }}
+          <NavLink 
+            to="/restaurants"
+            className={({isActive}) => (isActive ? "underline" : "notActive")}
           >
             Restaurants
-          </button>
-          <button
-            onClick={() => {
-              navigate("/Chefs");
-            }}
+          </NavLink>
+          <NavLink
+            to="/chefs"
+            className={({isActive}) => (isActive ? "underline" : "notActive")}
           >
             Chefs
-          </button>
+          </NavLink>
         </div>
 
         <div className="menu-right">

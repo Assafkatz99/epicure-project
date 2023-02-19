@@ -9,13 +9,14 @@ interface ISmall_card {
 }
 
 const Small_rest_card: React.FC <ISmall_card> = (props) => {
-<<<<<<< Updated upstream
-      return (<div className="rest_small_card">
-            <img src={props.rest_img} /> 
-=======
+// <<<<<<< Updated upstream
+//       return (<div className="rest_small_card">
+// <<<<<<< HEAD
+//             <img src={props.rest_img} /> 
+// =======
       return (<div className="rest_small_card" onClick={props.onclick}>
             <img src={props.rest_img} alt="small_rest_img"/> 
->>>>>>> Stashed changes
+
             <div className="botton_small_card_div">
                 <span>{props.rest_name}</span>
             </div>

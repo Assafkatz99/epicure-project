@@ -1,11 +1,15 @@
 
 .chef_card{
     position: relative;
+}
 
-
+.homepage{
     height: 26vw;
-    width: 33vw;
-
+    width: 33vw; 
+}
+.chef_page{
+    height: 23.5vw;
+    width: 26vw; 
 }
 
 .chef_card img {

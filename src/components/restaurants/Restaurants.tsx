@@ -1,33 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { White_button } from "../../typs/buttons/Styled_buttons";
 import Card from "../homepage/hp-components/card/Card";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
-<<<<<<< Updated upstream
-import "./restaurants.css";
-
-=======
 
 import "./restaurants.css";
 import { useDispatch, useSelector } from "react-redux";
 import { filter } from "../../store/slicers/restaurantsSlicer";
 import { useNavigate, NavLink } from "react-router-dom";
->>>>>>> Stashed changes
 
 const Restaurants: React.FC = () => {
-      return (<>
-        <Navbar />
-
-<<<<<<< Updated upstream
-        <div className="filters_first_row">
-          <div className="buttons_first_row">
-            <White_button>All</White_button>
-            <White_button>New</White_button>
-            <White_button>Most Popular</White_button>
-            <White_button>Open Now</White_button>
-            <White_button>Map View</White_button>
-          </div>
-=======
+    const dispatch = useDispatch();
+    const restaurants = useSelector ((state:any) => {state.restaurants.initialValue})
+    const chefs = useSelector ((state:any) => {state.chefs.initialValue})
+    const [boldName, setBoldName] = useState("all")  
   useEffect(() => {
     dispatch(filter(boldName));
   }, [boldName]);
@@ -36,7 +22,6 @@ const Restaurants: React.FC = () => {
   return (
     <>
       <Navbar />
-
       <div className="filters_first_row">
         <div className="buttons_first_row">
           <White_button
@@ -86,7 +71,6 @@ const Restaurants: React.FC = () => {
           >
             Map View
           </White_button>
->>>>>>> Stashed changes
         </div>
 
         <div className="filters_second_row">
@@ -97,19 +81,6 @@ const Restaurants: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< Updated upstream
-        <div className="restaurants_grid">
-        {
-        (() => {
-          let  restaurants = [];
-          for (let i = 0; i < 10; i++) {
-            restaurants.push(<Card class="rest" img="https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg" name="Rest1" chefName="Eran the chef" rating={"5"} />);
-          }
-          return restaurants;
-        })()
-      }
-        </div>
-=======
       <div className="restaurants_grid">
         {restaurants.map((restaurant: any) => {
          const chef = chefs.find((chef:any) => chef.restaurant_ids.includes(restaurant.id) )
@@ -125,11 +96,13 @@ const Restaurants: React.FC = () => {
         )
         })}
       </div>
->>>>>>> Stashed changes
 
       <Footer />
-        </>
-      )
-    }
+        </div>
+
+      </>
+  )
+      }
+
 
 export default Restaurants;
