@@ -17,15 +17,15 @@ const Navbar: React.FC = () => {
       </button>
       <div className="menu">
         <div className="menu-left">
-          <NavLink 
+          <NavLink
             to="/restaurants"
-            className={({isActive}) => (isActive ? "underline" : "notActive")}
+            className={({ isActive }) => (isActive ? "underline" : "notActive")}
           >
             Restaurants
           </NavLink>
           <NavLink
             to="/chefs"
-            className={({isActive}) => (isActive ? "underline" : "notActive")}
+            className={({ isActive }) => (isActive ? "underline" : "notActive")}
           >
             Chefs
           </NavLink>

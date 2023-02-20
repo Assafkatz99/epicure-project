@@ -52,36 +52,40 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
               <div className="choose_a_side_div">
                 <UnderlineHeadline>Choose a side</UnderlineHeadline>
                 <div className="radio-buttons">
-                  {props.dish.sides.length>1 ? props.dish.sides.map((side) => (
-                    <label>
-                      <input
-                        type="radio"
-                        name="side"
-                        value={side.split(" ").join("-")}
-                      />
-                      {side}
-                    </label>
-                  )):
-                  <p className="center">There are no available sides</p>
-                  }
+                  {props.dish.sides.length > 1 ? (
+                    props.dish.sides.map((side) => (
+                      <label>
+                        <input
+                          type="radio"
+                          name="side"
+                          value={side.split(" ").join("-")}
+                        />
+                        {side}
+                      </label>
+                    ))
+                  ) : (
+                    <p className="center">There are no available sides</p>
+                  )}
                 </div>
               </div>
 
               <div className="changes_div">
                 <UnderlineHeadline>Changes</UnderlineHeadline>
                 <div className="checkboxes">
-                  {props.dish.changes.length>1 ? props.dish.changes.map((change) => (
-                    <label>
-                      <input
-                        type="checkbox"
-                        name={change.split(" ").join("-")}
-                        value={change.split(" ").join("-")}
-                      />
-                      {change}
-                    </label>
-                  )): 
-                  <p className="center">There are no available changes</p>
-                  }
+                  {props.dish.changes.length > 1 ? (
+                    props.dish.changes.map((change) => (
+                      <label>
+                        <input
+                          type="checkbox"
+                          name={change.split(" ").join("-")}
+                          value={change.split(" ").join("-")}
+                        />
+                        {change}
+                      </label>
+                    ))
+                  ) : (
+                    <p className="center">There are no available changes</p>
+                  )}
                 </div>
               </div>
               <div className="quantity_div">

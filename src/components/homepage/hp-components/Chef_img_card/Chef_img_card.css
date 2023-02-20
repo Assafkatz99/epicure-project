@@ -1,49 +1,48 @@
-
-.chef_card{
-    position: relative;
+.chef_card {
+  position: relative;
 }
 
-.homepage{
-    height: 26vw;
-    width: 33vw; 
+.homepage {
+  height: 26vw;
+  width: 33vw;
 }
-.chef_page{
-    height: 23.5vw;
-    width: 26vw; 
+.chef_page {
+  height: 23.5vw;
+  width: 26vw;
 }
 
 .chef_card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position:center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.chef_name{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.chef_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background-color: #FFFFFFCC;
-    padding: 15px 0px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+  background-color: #ffffffcc;
+  padding: 15px 0px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 
-    font-size: 2.7vw;
-    
-    font-family: "HelveticaNeue-Light";
-    font-weight: 800;
+  font-size: 2.7vw;
 
-    letter-spacing: 0.5px;
+  font-family: "HelveticaNeue-Light";
+  font-weight: 800;
 
-    height: 50px;
-    transition: 0.5s;
-    
+  letter-spacing: 0.5px;
 
+  height: 50px;
+  transition: 0.5s;
 }
-.chef_card:hover{cursor: pointer;}
+.chef_card:hover {
+  cursor: pointer;
+}
 .chef_card:hover .chef_name {
-    cursor: pointer;
-    padding-bottom: 40px; 
+  cursor: pointer;
+  padding-bottom: 40px;
 }

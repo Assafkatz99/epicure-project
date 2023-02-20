@@ -10,15 +10,15 @@ import { filter } from "../../store/slicers/restaurantsSlicer";
 import { useNavigate, NavLink } from "react-router-dom";
 
 const Restaurants: React.FC = () => {
-    const dispatch = useDispatch();
-    const restaurants:any = useSelector ((state:any) => state.restaurants.value)
-    const chefs:any = useSelector ((state:any) => state.chefs.initialValue)
-    const [boldName, setBoldName] = useState("all")  
+  const dispatch = useDispatch();
+  const restaurants: any = useSelector((state: any) => state.restaurants.value);
+  const chefs: any = useSelector((state: any) => state.chefs.initialValue);
+  const [boldName, setBoldName] = useState("all");
   useEffect(() => {
     dispatch(filter(boldName));
   }, [boldName]);
 
-  const navigation = useNavigate()
+  const navigation = useNavigate();
   return (
     <>
       <Navbar />
@@ -72,38 +72,48 @@ const Restaurants: React.FC = () => {
             Map View
           </Clean_button>
         </div>
-        </div>
+      </div>
 
-        <div className="filters_second_row">
-          <div className="buttons_second_row">
-            <Clean_button>Price Range  <img src='assets/icons/rest_page_icons/arrow_down.svg' /></Clean_button>
-            <Clean_button>Distance  <img src='assets/icons/rest_page_icons/arrow_down.svg' /></Clean_button>
-            <Clean_button>Rating  <img src='assets/icons/rest_page_icons/arrow_down.svg' /></Clean_button>
-          </div>
+      <div className="filters_second_row">
+        <div className="buttons_second_row">
+          <Clean_button>
+            Price Range{" "}
+            <img src="assets/icons/rest_page_icons/arrow_down.svg" />
+          </Clean_button>
+          <Clean_button>
+            Distance <img src="assets/icons/rest_page_icons/arrow_down.svg" />
+          </Clean_button>
+          <Clean_button>
+            Rating <img src="assets/icons/rest_page_icons/arrow_down.svg" />
+          </Clean_button>
         </div>
+      </div>
 
       <div className="restaurants_grid">
-        {restaurants.map((restaurant: any, index:number) => {
-         const chef = chefs.find((chef:any) => chef.restaurant_ids.includes(restaurant.id) )
-         const chef_name = `${chef?.first_name} ${chef?.last_name}`
-        return(
-          <Card class="rest"
-          key={index}
-          onclick={() => {navigation ( `/restaurants/${restaurant.id}`)}}
-            img={restaurant.img_url}
-            name={restaurant.name}
-            chefName={ chef_name }
-            rating={restaurant.rating}
-          />
-        )
+        {restaurants.map((restaurant: any, index: number) => {
+          const chef = chefs.find((chef: any) =>
+            chef.restaurant_ids.includes(restaurant.id)
+          );
+          const chef_name = `${chef?.first_name} ${chef?.last_name}`;
+          return (
+            <Card
+              class="rest"
+              key={index}
+              onclick={() => {
+                navigation(`/restaurants/${restaurant.id}`);
+              }}
+              img={restaurant.img_url}
+              name={restaurant.name}
+              chefName={chef_name}
+              rating={restaurant.rating}
+            />
+          );
         })}
       </div>
 
       <Footer />
-
-      </>
-  )
-      }
-
+    </>
+  );
+};
 
 export default Restaurants;

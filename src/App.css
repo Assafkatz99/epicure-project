@@ -22,7 +22,7 @@ a {
 a:hover {
   cursor: pointer;
 }
-  
+
 @media screen and(max-width:500px) {
   h1 {
     font-size: 24px;
@@ -36,23 +36,21 @@ a:hover {
 }
 
 @font-face {
-  font-family: 'HelveticaNeue-Thin';
-  src: url('./fonts/HelveticaNeue-Thin.ttf') format('truetype');
+  font-family: "HelveticaNeue-Thin";
+  src: url("./fonts/HelveticaNeue-Thin.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'HelveticaNeue-Light';
-  src: url('./fonts/HelveticaNeue-Light.ttf') format('truetype');
+  font-family: "HelveticaNeue-Light";
+  src: url("./fonts/HelveticaNeue-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'HelveticaNeue-Medium';
-  src: url('./fonts/HelveticaNeue-Medium.ttf') format('truetype');
+  font-family: "HelveticaNeue-Medium";
+  src: url("./fonts/HelveticaNeue-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Helvetica-Neu-Bold';
-  src: url('./fonts/Helvetica-Neu-Bold.ttf') format('truetype');
+  font-family: "Helvetica-Neu-Bold";
+  src: url("./fonts/Helvetica-Neu-Bold.ttf") format("truetype");
 }
-
-

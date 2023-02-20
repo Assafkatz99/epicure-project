@@ -2,10 +2,8 @@ import React from "react";
 import Card from "../card/Card";
 import "./Popular_restaurant.css";
 
-
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-
 
 const Popular_restaurant: React.FC = () => {
   const chefs = useSelector((state: any) => state.chefs.initialValue);
@@ -16,11 +14,10 @@ const Popular_restaurant: React.FC = () => {
     <div className="popular_restaurant">
       <span>POPULAR RESTAURANT IN EPICURE:</span>
       <div className="popular_restaurant_cards">
-
         {restaurants
-          .filter((rest:any) => rest.is_favorite === true)
+          .filter((rest: any) => rest.is_favorite === true)
           .slice(0, 3)
-          .map((rest:any, index:number) => {
+          .map((rest: any, index: number) => {
             const chef = chefs.find((chef: any) =>
               chef.restaurant_ids.includes(rest.id)
             );
@@ -39,11 +36,6 @@ const Popular_restaurant: React.FC = () => {
               />
             );
           })}
-
-      
-
-
-         
       </div>
       <button>All Restaurant {">>"}</button>
     </div>

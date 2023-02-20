@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import Footer from "../../homepage/hp-components/footer/Footer";
 import Navbar from "../../navbar/Navbar";
 import { Clean_button } from "../../../typs/buttons/Styled_buttons";
@@ -12,10 +12,8 @@ const SingleRestaurant: React.FC = () => {
   const dishes = useSelector((state: any) => state.dishes.value);
   const chefs = useSelector((state: any) => state.chefs.value);
   const restaurants = useSelector((state: any) => state.restaurants.value);
-  const rest_id = (useParams()["single"] as unknown as number);
-  const specific_rest = restaurants.find(
-    (rest: any) => rest.id == rest_id
-  );
+  const rest_id = useParams()["single"] as unknown as number;
+  const specific_rest = restaurants.find((rest: any) => rest.id == rest_id);
   const chef = chefs.find((chef: any) =>
     chef.restaurant_ids.includes(Number(rest_id))
   );
@@ -23,7 +21,6 @@ const SingleRestaurant: React.FC = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [DishIdForModal, setDishIdForModal] = useState(0);
-  
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -55,15 +52,15 @@ const SingleRestaurant: React.FC = () => {
           </div>
           <div className="dishes_grid_div">
             <div className="dishes_grid">
-              {specific_rest.dish_ids.map((dish_id: any, index:number) => {
-                const dish = dishes[dish_id-1];
+              {specific_rest.dish_ids.map((dish_id: any, index: number) => {
+                const dish = dishes[dish_id - 1];
                 if (dish) {
                   return (
                     <Card
                       key={index}
-                      onclick={() =>{ 
-                        setDishIdForModal(dish_id)
-                        setShowModal(true)
+                      onclick={() => {
+                        setDishIdForModal(dish_id);
+                        setShowModal(true);
                       }}
                       class="small_dish"
                       img={dish.img_url}
@@ -80,8 +77,12 @@ const SingleRestaurant: React.FC = () => {
           </div>
           <Footer />
           {showModal && (
-            <div className="modal-backdrop" >
-              <Modal dish={dishes.find((dish:any) => dish.id == DishIdForModal)} show={showModal} onclick={handleCloseModal} />
+            <div className="modal-backdrop">
+              <Modal
+                dish={dishes.find((dish: any) => dish.id == DishIdForModal)}
+                show={showModal}
+                onclick={handleCloseModal}
+              />
             </div>
           )}
         </>

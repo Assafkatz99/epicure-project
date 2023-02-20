@@ -10,19 +10,19 @@ import Chef_of_the_week from "./hp-components/Chef_of_the_week/Chef_of_the_week"
 import Bottom_section from "./hp-components/bottom_section/Bottom_section";
 import Footer from "./hp-components/footer/Footer";
 
-
 const Homepage: React.FC = () => {
-      return (<>
-        <Navbar />
-        <Hero />
-        <Popular_restaurant />
-        <Popular_dishes />
-        <Icons />
-        <Chef_of_the_week />
-        <Bottom_section />
-        <Footer />
-        </>
-      )
-    }
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Popular_restaurant />
+      <Popular_dishes />
+      <Icons />
+      <Chef_of_the_week />
+      <Bottom_section />
+      <Footer />
+    </>
+  );
+};
 
 export default Homepage;

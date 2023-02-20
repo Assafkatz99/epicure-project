@@ -8,10 +8,7 @@ const chefsSlice = createSlice({
     value: data.chefs,
     cotw_id: data.chef_of_the_week_id,
   },
-  reducers: {
-      
-  },
+  reducers: {},
 });
-
 
 export default chefsSlice.reducer;

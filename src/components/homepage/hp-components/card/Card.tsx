@@ -3,15 +3,13 @@ import ICard from "../../../../typs/interfaces/ICard";
 import "./Card.css";
 
 const Card: React.FC<ICard> = (props) => {
-  
   return (
     <div className={`card ${props.class}`} onClick={props.onclick}>
       <img className="card_img" src={props.img} alt="rest/dish_img" />
       <div className="card_bottom_div">
         <h3>{props.name}</h3>
-    
-          {props.icons && Object.values(props.icons).includes(true) && (
 
+        {props.icons && Object.values(props.icons).includes(true) && (
           <section className="icons_section">
             {Object.entries(props.icons).map(
               (icon: Array<boolean>, index: number) =>
@@ -27,7 +25,9 @@ const Card: React.FC<ICard> = (props) => {
           </section>
         )}
 
-        <h2>{props.chefName ? props.chefName : props.dishDescription?.join(", ")}</h2>
+        <h2>
+          {props.chefName ? props.chefName : props.dishDescription?.join(", ")}
+        </h2>
         {props.rating ? (
           <section>
             {

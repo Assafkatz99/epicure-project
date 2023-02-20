@@ -1,132 +1,123 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: "HelveticaNeue-Light";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "HelveticaNeue-Light";
 }
 
-.logo{
-    height:33px
+.logo {
+  height: 33px;
 }
 
-#logo-button-id{
-    height: 33px;
+#logo-button-id {
+  height: 33px;
 }
 
-button{
-    all: unset;
-    height: 24px;
+button {
+  all: unset;
+  height: 24px;
 }
 
-button:hover{
-    cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
 
+.navbar {
+  height: 64px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0px 8vw;
 
-.navbar{
-    height: 64px;
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    padding: 0px 8vw;
+  background-color: white;
+  z-index: 10;
 
-    background-color: white;
-    z-index: 10;
+  position: sticky;
+  top: 0px;
 
-    position: sticky;
-    top: 0px;
-
-    border-bottom: #97979787 0.2px solid;
+  border-bottom: #97979787 0.2px solid;
 }
 
-.navbar div{
-    display: flex;
-    align-items: center;
-    gap: 32px;
+.navbar div {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .menu {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 32px;
-    font-size: 18px;
-    text-align: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 32px;
+  font-size: 18px;
+  text-align: center;
 }
 
-.menu-icons{
-    height: 24px;
+.menu-icons {
+  height: 24px;
 }
 
 .menu-right input {
-    all:unset;
-    text-align: start;
-    width: 24px;
-    height: 41px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: white;
-    background-image: url('../../../public/assets/logos/search_button.svg');
-    background-position: right; 
-    background-repeat: no-repeat;
-    padding: 0px 40px 0px 10px;
-    transition: width 0.4s ease-out;
-    -webkit-transition: width 0.4s ease-out;
-    font-size: 18px;
+  all: unset;
+  text-align: start;
+  width: 24px;
+  height: 41px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  background-image: url("../../../public/assets/logos/search_button.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 0px 40px 0px 10px;
+  transition: width 0.4s ease-out;
+  -webkit-transition: width 0.4s ease-out;
+  font-size: 18px;
 }
-  
-.menu-right input:hover{
-    cursor: pointer;
+
+.menu-right input:hover {
+  cursor: pointer;
 }
 
 .menu-right input:focus {
-    background-position: 99%;
-    width: 410px;
-    border: 0.5px black solid;
-    cursor: text;
+  background-position: 99%;
+  width: 410px;
+  border: 0.5px black solid;
+  cursor: text;
 }
-   
 
 .menu-right input::placeholder {
-    font-size: 18px;
-} 
-
-
+  font-size: 18px;
+}
 
 .menu-left a {
-    position: relative;
-  }
-  
+  position: relative;
+}
+
 .notActive:before {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 1.8px;
-    background-color: #de9000;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.17s ease-in-out;
-  }
-  
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1.8px;
+  background-color: #de9000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.17s ease-in-out;
+}
+
 .notActive:hover:before {
-    transform: scaleX(1);
-  }
-  
-
-.underline{
-    border-bottom: #de9000 2.8px solid;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+  transform: scaleX(1);
 }
 
-.notActive{
-    all: unset;
-    cursor: pointer;
+.underline {
+  border-bottom: #de9000 2.8px solid;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
-  
-  
-  
+.notActive {
+  all: unset;
+  cursor: pointer;
+}
