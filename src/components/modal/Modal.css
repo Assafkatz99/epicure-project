@@ -14,7 +14,6 @@
     
 }
 
-
 .modal{
     height: 86%;
     width: 30%;
@@ -28,7 +27,7 @@
 }
 
 .content{
-    width: 50%;
+    width: 60%;
     max-height: 70%;
     overflow-y: scroll;
     display: flex;
@@ -40,6 +39,9 @@
     padding:15px 20px 50px 20px;
     margin: 1px;
 }
+
+
+
 .content::-webkit-scrollbar {
     width: 3px;
     height: 3px;
@@ -77,7 +79,7 @@
     height: 3.5vw;
 }
 
-.pricing{
+.dish_pricing{
     width: 99%;
     position: static;
     bottom: 10px;
@@ -88,11 +90,17 @@
     gap: 10px;
 }
 
-.pricing hr{
+.dish_pricing hr{
     all: unset;
     border-bottom: black 1px solid;
     width: 25%;
 }
+
+.choose_a_side_div p, .changes_div p{
+  width: 100%;
+  font-size: 1.3vw;
+}
+
 .choose_a_side_div, .changes_div, .quantity_div{
   width: 80%;
 }
@@ -103,10 +111,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  
 }
 
 .choose_a_side_div input, .changes_div input{
   margin-right: 10px;
+  
 }
 
 .quantity_div div{

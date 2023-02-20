@@ -1,14 +1,10 @@
 import React, { useRef, useState } from "react";
 import { AddToBagButton } from "../../typs/buttons/Styled_buttons";
 import { UnderlineHeadline } from "../../typs/headlines/UnderlineHeadline";
+import IModalProps from "../../typs/interfaces/IModalProps";
 import "./Modal.css";
 
-interface ModalProps {
-  show: boolean;
-  onclick: () => void;
-}
-
-const Modal: React.FC<ModalProps> = (props: ModalProps) => {
+const Modal: React.FC<IModalProps> = (props: IModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -20,16 +16,7 @@ const Modal: React.FC<ModalProps> = (props: ModalProps) => {
 
   const [quantity, setQuantity] = useState(1);
 
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
-
-  const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
+  console.log(props.dish);
   return (
     <>
       {props.show && (
@@ -37,76 +24,64 @@ const Modal: React.FC<ModalProps> = (props: ModalProps) => {
           <div className="modal" ref={modalRef}>
             <img
               className="dish_img"
-              src="https://media.istockphoto.com/id/612373334/photo/cat-made-of-bread-and-vegetables.jpg?s=612x612&w=0&k=20&c=8vVVWd29edKvmVyh7xe2UtHkLskYxyMNPv_Y0DcPUGM="
-              alt=""
+              src={props.dish.img_url}
+              alt={`img of ${props.dish.name}`}
             />
             <div className="content">
-              <h3>adadlksadj</h3>
-              <h1>
-                sadsada, asddsasda, asddsasd, asdsa, asddsasda, asddsasd, asdsa,
-                asddsasdsadsada, asddsasda, asddsasd, asdsa, asddsasda, asddsasd, asdsa,
-                asddsasdsadsada, asddsasda, asddsasd, asdsa, asddsasda, asddsasd, asdsa,
-                asddsasdsadsada, asddsasda, asddsasd, asdsa, asddsasda, asddsasd, asdsa,
-                asddsasdsadsada, asddsasda, asddsasd, asdsa, asddsasda, asddsasd, asdsa,
-                asddsasdsadsada, asddsasda, asddsasd, asdsa, asddsasda, asddsasd, asdsa,
-                asddsasdsadsada, asddsasda, asddsasd, asdsa, asddsasda, asddsasd, asdsa,
-                asddsasd
-              </h1>
+              <h3>{props.dish.name}</h3>
+              <h1>{props.dish.ingredients.join(", ")}</h1>
               <section className="icons_section">
-                {Object.entries({
-                  isSpicy: true,
-                  isVegan: false,
-                  isVegitarian: true,
-                }).map((icon: any, index: number) =>
-                  icon[1] == true ? (
-                    <img
-                      key={index}
-                      className="icon"
-                      src={`/assets/icons/dishes_types_icons/${icon[0]}.svg`}
-                      alt="icons"
-                    />
-                  ) : null
+                {Object.entries(props.dish.icons).map(
+                  (icon: any, index: number) =>
+                    icon[1] == true ? (
+                      <img
+                        key={index}
+                        className="icon"
+                        src={`/assets/icons/dishes_types_icons/${icon[0]}.svg`}
+                        alt="icons"
+                      />
+                    ) : null
                 )}
               </section>
-              <div className="pricing">
+              <div className="dish_pricing">
                 <hr />
-                <p>₪{57}</p>
+                <p>₪{props.dish.price}</p>
                 <hr />
               </div>
 
               <div className="choose_a_side_div">
                 <UnderlineHeadline>Choose a side</UnderlineHeadline>
                 <div className="radio-buttons">
-                  <label>
-                    <input type="radio" name="side" value="white-bread" />
-                    White bread
-                  </label>
-                  <label>
-                    <input type="radio" name="side" value="sticky-rice" />
-                    Sticky rice
-                  </label>
+                  {props.dish.sides.length>1 ? props.dish.sides.map((side) => (
+                    <label>
+                      <input
+                        type="radio"
+                        name="side"
+                        value={side.split(" ").join("-")}
+                      />
+                      {side}
+                    </label>
+                  )):
+                  <p className="center">There are no available sides</p>
+                  }
                 </div>
               </div>
 
               <div className="changes_div">
                 <UnderlineHeadline>Changes</UnderlineHeadline>
                 <div className="checkboxes">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="without-peanuts"
-                      value="without-peanuts"
-                    />
-                    Without peanuts
-                  </label>
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="sticky-less-spicy"
-                      value="sticky-less-spicy"
-                    />
-                    Sticky Less spicy
-                  </label>
+                  {props.dish.changes.length>1 ? props.dish.changes.map((change) => (
+                    <label>
+                      <input
+                        type="checkbox"
+                        name={change.split(" ").join("-")}
+                        value={change.split(" ").join("-")}
+                      />
+                      {change}
+                    </label>
+                  )): 
+                  <p className="center">There are no available changes</p>
+                  }
                 </div>
               </div>
               <div className="quantity_div">
@@ -114,14 +89,13 @@ const Modal: React.FC<ModalProps> = (props: ModalProps) => {
                 <div className="quantity_controls">
                   <button
                     onClick={() => setQuantity((prev) => prev - 1)}
-                    disabled={quantity == 1}  className={quantity === 1 ? "disabled" : ""}
+                    disabled={quantity == 1}
+                    className={quantity === 1 ? "disabled" : ""}
                   >
                     –
                   </button>
                   <span>{quantity}</span>
-                  <button
-                    onClick={() => setQuantity((prev) => prev + 1)}
-                  >
+                  <button onClick={() => setQuantity((prev) => prev + 1)}>
                     +
                   </button>
                 </div>

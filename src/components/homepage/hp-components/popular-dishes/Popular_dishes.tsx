@@ -1,23 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../card/Card";
-import data from "../../../../data/data.json"
 import "../popular-restaurant/Popular_restaurant.css";
+import Modal from "../../../modal/Modal";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 const Popular_dishes: React.FC = () => {
+  const dishes = useSelector((state: any) => state.dishes.value);
+  const navigation = useNavigate();
+
+  const [showModal, setShowModal] = useState(false);
+  const [DishIdForModal, setDishIdForModal] = useState(0);
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
     
 
     return (
-      <div className="popular_restaurant">
-      <span>SIGNATURE DISH OF:</span>
-      <div className="popular_restaurant_cards">
-          <Card class="dish" img={data.dishes[1].img_url} name={data.dishes[1].name} dishDescription={data.dishes[1].ingredients} icons={data.dishes[1].icons} price={data.dishes[1].price}  />
-          <Card class="dish" img={data.dishes[2].img_url} name={data.dishes[2].name} dishDescription={data.dishes[2].ingredients} icons={data.dishes[2].icons} price={data.dishes[2].price}  />
-          <Card class="dish" img={data.dishes[3].img_url} name={data.dishes[3].name} dishDescription={data.dishes[3].ingredients} icons={data.dishes[3].icons} price={data.dishes[3].price}  />
-      </div>
-      </div>
-      )
+      <>
+        <div className="popular_restaurant">
+          <span>SIGNATURE DISH OF:</span>
+          <div className="popular_restaurant_cards">
+
+            {dishes
+              .filter((dish: any) => dish.is_signature)
+              .slice(0, 3)
+              .map((dish: any, index: number) => {
+                return (
+                  <Card
+                    key={index}
+                    onclick={() =>{ 
+                      setDishIdForModal(dish.id)
+                      setShowModal(true)
+                    }}
+                    class="dish"
+                    img={dish.img_url}
+                    name={dish.name}
+                    icons={dish.icons}
+                    dishDescription= {dish.ingredients}
+                    price={dish.price}
+                    
+                    />
+                    );
+                  })}
+
+          </div>
+        </div>
+        {showModal && (
+            <div className="modal-backdrop" >
+              <Modal dish={dishes.find((dish:any) => dish.id == DishIdForModal)} show={showModal} onclick={handleCloseModal} />
+            </div>
+          )}
+      </>
+    );
     }
 
 export default Popular_dishes;
