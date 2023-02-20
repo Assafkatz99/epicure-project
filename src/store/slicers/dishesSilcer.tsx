@@ -10,6 +10,4 @@ export const dishesSlice = createSlice({
   reducers: {},
 });
 
-export const {} = dishesSlice.actions;
-
 export default dishesSlice.reducer;

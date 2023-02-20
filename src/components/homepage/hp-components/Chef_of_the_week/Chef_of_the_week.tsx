@@ -6,37 +6,39 @@ import "./Chef_of_the_week.css";
 import { useNavigate } from "react-router-dom";
 import Restaurants from "../../../restaurants/Restaurants";
 import { useSelector } from "react-redux";
+import { RootState } from "../../../../store/store";
+import { IChef, IRestaurant } from "../../../../typs/interfaces/slicersInterfaces";
 
 const Chef_of_the_week: React.FC = () => {
-  const restaurants = useSelector((state: any) => state.restaurants.value);
-  const chefs = useSelector((state: any) => state.chefs.value);
-  const chef_of_the_week_id = useSelector((state: any) => state.chefs.cotw_id);
+  const restaurants = useSelector((state: RootState) => state.restaurants.value);
+  const chefs = useSelector((state: RootState) => state.chefs.value);
+  const chef_of_the_week_id = useSelector((state: RootState) => state.chefs.chef_of_the_week_id);
 
-  const cotw = chefs.find((chef: any) => chef.id === chef_of_the_week_id);
+  const chef_of_the_week = chefs.find((chef: IChef) => chef.id === Number(chef_of_the_week_id));
 
   const navigation = useNavigate();
 
   return (
-    <div className="cotw_div">
+    <div className="chef_of_the_week_div">
       <h1>CHEF OF THE WEEK:</h1>
-      <div className="upper_cotw_div">
+      <div className="upper_chef_of_the_week_div">
         <Chef_img_card
           layout="homepage"
-          chef_f_name={cotw?.first_name ? cotw.first_name : ""}
-          chef_l_name={cotw?.last_name ? cotw.last_name : ""}
-          chef_img_src={cotw?.img_url ? cotw.img_url : ""}
+          chef_f_name={chef_of_the_week?.first_name ? chef_of_the_week.first_name : ""}
+          chef_l_name={chef_of_the_week?.last_name ? chef_of_the_week.last_name : ""}
+          chef_img_src={chef_of_the_week?.img_url ? chef_of_the_week.img_url : ""}
         />
-        <p>{cotw?.about}</p>
+        <p>{chef_of_the_week?.about}</p>
       </div>
-      <div className="botton_cotw_div">
-        <span>{cotw?.first_name}'s Restaurant</span>
-        <div className="cotw_cards">
-          {cotw?.restaurant_ids
-            .map((rest_id: any) =>
-              restaurants.find((rest: any) => rest.id === rest_id)
+      <div className="botton_chef_of_the_week_div">
+        <span>{chef_of_the_week?.first_name}'s Restaurant</span>
+        <div className="chef_of_the_week_cards">
+          {chef_of_the_week?.restaurant_ids
+            .map((rest_id: number) =>
+              restaurants.find((rest: IRestaurant) => rest.id === rest_id)
             )
             .slice(0, 4)
-            .map((restaurant: any, index: number) => (
+            .map((restaurant: (IRestaurant | undefined), index: number) => (
               <Small_rest_card
                 key={index}
                 onclick={() => {

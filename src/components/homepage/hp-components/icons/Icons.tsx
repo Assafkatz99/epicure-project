@@ -2,17 +2,18 @@ import React from "react";
 import "./Icons.css";
 
 const Icons: React.FC = () => {
+  const dishes_types =["isSpicy", "isVegitarian", "isVegan"]
   return (
     <div className="grey_icons_div">
       <span>THE MEANING OF OUR ICONS:</span>
       <div className="icons_div">
-        {["isSpicy", "isVegitarian", "isVegan"].map((e) => (
-          <section className={e}>
+        {dishes_types.map((type) => (
+          <section className={type}>
             <img
-              src={"assets/icons/dishes_types_icons/" + e + ".svg"}
+              src={"assets/icons/dishes_types_icons/" + type + ".svg"}
               alt="icon_source"
             />
-            <p>{e.slice(2)}</p>
+            <p>{type.slice(2)}</p>
           </section>
         ))}
       </div>

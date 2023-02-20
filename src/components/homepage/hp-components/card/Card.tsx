@@ -12,7 +12,7 @@ const Card: React.FC<ICard> = (props) => {
         {props.icons && Object.values(props.icons).includes(true) && (
           <section className="icons_section">
             {Object.entries(props.icons).map(
-              (icon: Array<boolean>, index: number) =>
+              (icon: Array<string | boolean>, index: number) =>
                 icon[1] == true ? (
                   <img
                     key={index}

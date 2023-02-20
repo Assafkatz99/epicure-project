@@ -6,9 +6,12 @@ const chefsSlice = createSlice({
   initialState: {
     initialValue: data.chefs,
     value: data.chefs,
-    cotw_id: data.chef_of_the_week_id,
+    chef_of_the_week_id: data.chef_of_the_week_id,
   },
   reducers: {},
 });
 
 export default chefsSlice.reducer;
+
+
+

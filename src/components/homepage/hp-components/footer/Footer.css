@@ -1,4 +1,4 @@
-.footer {
+footer {
   display: flex;
   justify-content: center;
   gap: 5vw;
@@ -8,7 +8,7 @@
   border-top: #97979787 0.2px solid;
 }
 
-.footer button:hover {
+footer button:hover {
   scale: 1.02;
   transition: 0.5s;
 }

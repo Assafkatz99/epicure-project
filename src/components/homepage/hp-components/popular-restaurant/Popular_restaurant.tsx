@@ -15,7 +15,7 @@ const Popular_restaurant: React.FC = () => {
       <span>POPULAR RESTAURANT IN EPICURE:</span>
       <div className="popular_restaurant_cards">
         {restaurants
-          .filter((rest: any) => rest.is_favorite === true)
+          .filter((rest: any) => rest.is_favorite)
           .slice(0, 3)
           .map((rest: any, index: number) => {
             const chef = chefs.find((chef: any) =>

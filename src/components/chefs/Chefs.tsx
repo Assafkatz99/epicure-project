@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Clean_button } from "../../typs/buttons/Styled_buttons";
+import { IChef } from "../../typs/interfaces/slicersInterfaces";
 import Chef_img_card from "../homepage/hp-components/Chef_img_card/Chef_img_card";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
 import "./Chefs.css";
+import  { RootState } from "../../store/store"
 
 const Chefs: React.FC = () => {
-  const chefs = useSelector((state: any) => state.chefs.value);
+  const chefs = useSelector((state: RootState) => state.chefs.value);
+  console.log(chefs)
   const [boldName, setBoldName] = useState("all");
 
   return (
@@ -42,7 +45,7 @@ const Chefs: React.FC = () => {
 
       <div className="chefs_grid_div">
         <div className="chefs_grid">
-          {chefs.map((chef: any) => (
+          {chefs.map((chef: IChef) => (
             <Chef_img_card
               layout="chef_page"
               chef_f_name={chef.first_name}

@@ -3,11 +3,11 @@ import "./Footer.css";
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer">
+    <footer >
       <button>Contact Us</button>
       <button>Term of Use</button>
       <button>Privacy Policy</button>
-    </div>
+    </footer>
   );
 };
 
