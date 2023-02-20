@@ -3,7 +3,7 @@
 // import Navbar from "../../navbar/Navbar";
 // import { White_button } from "../../../typs/buttons/Styled_buttons";
 // import "./SingleRestaurant.css";
-// import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux"
 // import Card from "../../homepage/hp-components/card/Card";
 // import { useParams } from "react-router-dom";
 // import Modal from "../../modal/Modal";
@@ -100,16 +100,15 @@ const SingleRestaurant: React.FC = () => {
   );
   const chef_name = `${chef?.first_name} ${chef?.last_name}`;
 
-  const [selectedDish, setSelectedDish] = useState<any>(null);
-
-  const handleDishClick = (dish: any) => {
-    setSelectedDish(dish);
+  const [showModal, setShowModal] = useState(false);
+  
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
-  const handleModalClose = () => {
-    setSelectedDish(null);
+  const handleOpenModal = () => {
+    setShowModal(true);
   };
-
   return (
     <>
       {specific_rest && (
@@ -142,7 +141,7 @@ const SingleRestaurant: React.FC = () => {
                   return (
                     <Card
                       key={dish_id}
-                      onclick={() => handleDishClick(dish)}
+                      onclick={() => setShowModal(dish)}
                       class="small_dish"
                       img={dish.img_url}
                       name={dish.name}
@@ -157,9 +156,9 @@ const SingleRestaurant: React.FC = () => {
             </div>
           </div>
           <Footer />
-          {selectedDish && (
-            <div className="modal-backdrop" onClick={handleModalClose}>
-              <Modal dish={selectedDish} onClose={handleModalClose} />
+          {showModal && (
+            <div className="modal-backdrop" >
+              <Modal show={showModal} onclick={handleCloseModal} />
             </div>
           )}
         </>
