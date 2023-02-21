@@ -7,14 +7,24 @@ import { useSelector } from "react-redux";
 import Card from "../../homepage/hp-components/card/Card";
 import { useParams } from "react-router-dom";
 import Modal from "../../modal/Modal";
+import { RootState } from "../../../store/store";
+import {
+  IChef,
+  IDish,
+  IRestaurant,
+} from "../../../typs/interfaces/slicersInterfaces";
 
 const SingleRestaurant: React.FC = () => {
-  const dishes = useSelector((state: any) => state.dishes.value);
-  const chefs = useSelector((state: any) => state.chefs.value);
-  const restaurants = useSelector((state: any) => state.restaurants.value);
+  const dishes = useSelector((state: RootState) => state.dishes.value);
+  const chefs = useSelector((state: RootState) => state.chefs.value);
+  const restaurants = useSelector(
+    (state: RootState) => state.restaurants.value
+  );
   const rest_id = useParams()["single"] as unknown as number;
-  const specific_rest = restaurants.find((rest: any) => rest.id == rest_id);
-  const chef = chefs.find((chef: any) =>
+  const specific_rest = restaurants.find(
+    (rest: IRestaurant) => rest.id == rest_id
+  );
+  const chef = chefs.find((chef: IChef) =>
     chef.restaurant_ids.includes(Number(rest_id))
   );
   const chef_name = `${chef?.first_name} ${chef?.last_name}`;
@@ -52,7 +62,7 @@ const SingleRestaurant: React.FC = () => {
           </div>
           <div className="dishes_grid_div">
             <div className="dishes_grid">
-              {specific_rest.dish_ids.map((dish_id: any, index: number) => {
+              {specific_rest.dish_ids.map((dish_id: number, index: number) => {
                 const dish = dishes[dish_id - 1];
                 if (dish) {
                   return (
@@ -79,7 +89,7 @@ const SingleRestaurant: React.FC = () => {
           {showModal && (
             <div className="modal-backdrop">
               <Modal
-                dish={dishes.find((dish: any) => dish.id == DishIdForModal)}
+                dish={dishes.find((dish: IDish) => dish.id == DishIdForModal)}
                 show={showModal}
                 onclick={handleCloseModal}
               />

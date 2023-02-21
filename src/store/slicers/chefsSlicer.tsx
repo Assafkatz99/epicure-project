@@ -12,6 +12,3 @@ const chefsSlice = createSlice({
 });
 
 export default chefsSlice.reducer;
-
-
-

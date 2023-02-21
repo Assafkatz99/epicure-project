@@ -8,11 +8,15 @@ import "./restaurants.css";
 import { useDispatch, useSelector } from "react-redux";
 import { filter } from "../../store/slicers/restaurantsSlicer";
 import { useNavigate, NavLink } from "react-router-dom";
+import { RootState } from "../../store/store";
+import { IChef, IRestaurant } from "../../typs/interfaces/slicersInterfaces";
 
 const Restaurants: React.FC = () => {
   const dispatch = useDispatch();
-  const restaurants: any = useSelector((state: any) => state.restaurants.value);
-  const chefs: any = useSelector((state: any) => state.chefs.initialValue);
+  const restaurants = useSelector(
+    (state: RootState) => state.restaurants.value
+  );
+  const chefs = useSelector((state: RootState) => state.chefs.initialValue);
   const [boldName, setBoldName] = useState("all");
   useEffect(() => {
     dispatch(filter(boldName));
@@ -90,8 +94,8 @@ const Restaurants: React.FC = () => {
       </div>
 
       <div className="restaurants_grid">
-        {restaurants.map((restaurant: any, index: number) => {
-          const chef = chefs.find((chef: any) =>
+        {restaurants.map((restaurant: IRestaurant, index: number) => {
+          const chef = chefs.find((chef: IChef) =>
             chef.restaurant_ids.includes(restaurant.id)
           );
           const chef_name = `${chef?.first_name} ${chef?.last_name}`;

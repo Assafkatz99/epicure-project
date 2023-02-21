@@ -2,7 +2,7 @@ import React from "react";
 import "./Icons.css";
 
 const Icons: React.FC = () => {
-  const dishes_types =["isSpicy", "isVegitarian", "isVegan"]
+  const dishes_types = ["isSpicy", "isVegitarian", "isVegan"];
   return (
     <div className="grey_icons_div">
       <span>THE MEANING OF OUR ICONS:</span>

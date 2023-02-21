@@ -4,7 +4,7 @@ export interface ICons {
   isVegetarian: boolean;
 }
 
- export default interface ICard {
+export default interface ICard {
   img: string;
   name: string;
   rating?: number;
@@ -13,7 +13,5 @@ export interface ICons {
   icons?: ICons;
   price?: number;
   class: string;
-  onclick?: any;
+  onclick?: () => void;
 }
-
-

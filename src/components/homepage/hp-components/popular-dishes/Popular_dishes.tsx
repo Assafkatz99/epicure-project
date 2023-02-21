@@ -5,6 +5,7 @@ import Modal from "../../../modal/Modal";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../store/store";
 import { IDish } from "../../../../typs/interfaces/slicersInterfaces";
+import { ICons } from "../../../../typs/interfaces/ICard";
 
 const Popular_dishes: React.FC = () => {
   const dishes = useSelector((state: RootState) => state.dishes.value);
@@ -14,6 +15,7 @@ const Popular_dishes: React.FC = () => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
   return (
     <>
       <div className="popular_restaurant">
@@ -33,7 +35,7 @@ const Popular_dishes: React.FC = () => {
                   class="dish"
                   img={dish.img_url}
                   name={dish.name}
-                  icons={dish.icons}
+                  icons={dish.icons as unknown as ICons}
                   dishDescription={dish.ingredients}
                   price={dish.price}
                 />
@@ -44,7 +46,7 @@ const Popular_dishes: React.FC = () => {
       {showModal && (
         <div className="modal-backdrop">
           <Modal
-            dish={dishes.find((dish: any) => dish.id == DishIdForModal)}
+            dish={dishes.find((dish: IDish) => dish.id == DishIdForModal)}
             show={showModal}
             onclick={handleCloseModal}
           />

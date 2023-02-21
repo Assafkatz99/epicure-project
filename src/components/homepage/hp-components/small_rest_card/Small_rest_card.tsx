@@ -4,7 +4,7 @@ import "./Small_rest_card.css";
 interface ISmall_card {
   rest_img: string;
   rest_name: string;
-  onclick?: any;
+  onclick?: () => void;
 }
 
 const Small_rest_card: React.FC<ISmall_card> = (props) => {

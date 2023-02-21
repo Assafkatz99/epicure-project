@@ -1,10 +1,8 @@
 import Icons from "../../typs/interfaces/ICard";
 import { IDish } from "./slicersInterfaces";
 
-interface IModalProps {
+export interface IModalProps {
   show: boolean;
   onclick: () => void;
-  dish: IDish
+  dish: IDish | undefined;
 }
-
-export default IModalProps;
