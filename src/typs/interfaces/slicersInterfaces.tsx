@@ -31,4 +31,12 @@ export interface IDish {
   icons: ICons;
   sides: Array<string>;
   is_signature: boolean;
+  dishTiming: IDishTiming;
+}
+
+
+export interface IDishTiming {
+  breakfast: boolean;
+  lunch: boolean;
+  dinner: boolean;
 }

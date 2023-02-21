@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.rest_details img {
+.hero_img {
   width: 82vw;
   height: 29vw;
   object-fit: cover;
@@ -27,4 +27,14 @@
 .dishes_grid_div {
   display: flex;
   justify-content: center;
+}
+
+h1{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.open_now_img{
+  height: 15px;
 }

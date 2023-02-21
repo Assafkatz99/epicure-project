@@ -21,6 +21,7 @@ export interface RootState {
   dishes: {
     initialValue: IDish[];
     value: IDish[];
+    current_dishes: IDish[];
   };
 }
 

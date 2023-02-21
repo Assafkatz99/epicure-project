@@ -22,12 +22,7 @@
   background-color: #e5e5e5;
 }
 
-.buttons_second_row {
-  display: flex;
-  justify-content: space-evenly;
-  width: 37vw;
-  min-width: 400px;
-}
+
 
 .restaurants_grid {
   display: grid;
