@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Homepage from "./components/homepage/Homepage";
+import Restaurants from "./components/restaurants/Restaurants";
+import Chefs from "./components/chefs/Chefs";
+import SingleRestaurant from "./components/restaurants/restaurants_components/SingleRestaurant";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />}></Route>
+          <Route path="/restaurants" element={<Restaurants />}></Route>
+          <Route
+            path="/restaurants/:single"
+            element={<SingleRestaurant />}
+          ></Route>
+          <Route path="/chefs" element={<Chefs />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
