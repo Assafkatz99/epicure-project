@@ -12,37 +12,22 @@ export const dishesSlice = createSlice({
   },
   reducers: {
     filterDishes: (state, action) => {
-      state.current_dishes = action.payload.dishes_id_list.map(
-        (dish_id: number) => {
-          return state.initialValue.find((dish) => dish.id == dish_id);
-        }
-      );
-
-      state.current_dishes = state.current_dishes.filter(
-        (item) => item !== undefined
-      );
+      state.value = state.initialValue.filter(dish => action.payload.dishes_id_list.includes(dish.id));
 
       switch (action.payload.dish_timing) {
         case "breakfast":
-          state.value = state.current_dishes.filter(
-            (dish) => dish.dishTiming.breakfast
-          );
+          state.value = state.value.filter(dish => dish.dishTiming.breakfast)
           break;
-        case "lunch":
-          state.value = state.current_dishes.filter(
-            (dish) => dish.dishTiming.lunch
-          );
+          case "lunch":
+          state.value = state.value.filter(dish => dish.dishTiming.lunch)
           break;
-        case "dinner":
-          state.value = state.current_dishes.filter(
-            (dish) => dish.dishTiming.dinner
-          );
+          case "dinner":
+          state.value = state.value.filter(dish => dish.dishTiming.dinner)
           break;
-        case "":
-          state.value = state.initialValue;
+          case "":
           break;
-      }
-    },
+            }
+},
   },
 });
 

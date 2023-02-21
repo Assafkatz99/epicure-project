@@ -16,7 +16,6 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
 
   const [quantity, setQuantity] = useState(1);
 
-  console.log(props.dish);
   return (
     <>
       {props.show && (
