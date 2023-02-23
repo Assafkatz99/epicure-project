@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { stat } from "fs";
 import data from "../../data/data.json";
-import { IDish } from "../../typs/interfaces/slicersInterfaces";
 
 export const dishesSlice = createSlice({
   name: "dishes",

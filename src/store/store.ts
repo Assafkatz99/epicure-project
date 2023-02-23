@@ -3,9 +3,11 @@ import {
   IChef,
   IRestaurant,
   IDish,
+  IOrder,
 } from "../typs/interfaces/slicersInterfaces";
 import chefsSlicer from "./slicers/chefsSlicer";
 import dishesSilcer from "./slicers/dishesSilcer";
+import ordersSlicer from "./slicers/ordersSlicer";
 import restaurantsSlicer from "./slicers/restaurantsSlicer";
 
 export interface RootState {
@@ -23,6 +25,9 @@ export interface RootState {
     value: IDish[];
     current_dishes: IDish[];
   };
+  orders: {
+    value: IOrder[];
+  };
 }
 
 export default configureStore({
@@ -30,5 +35,6 @@ export default configureStore({
     chefs: chefsSlicer,
     restaurants: restaurantsSlicer,
     dishes: dishesSilcer,
+    orders: ordersSlicer,
   },
 });
