@@ -4,7 +4,6 @@ import "./navbar.css";
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
-  const [showUnderLine, setShowUnderLine] = useState<boolean>(false);
   return (
     <div className="navbar">
       <button

@@ -25,5 +25,7 @@
 
   font-family: "HelveticaNeue-Medium";
 
-  margin: 30px 8vw 0px 0px;
+  margin: 30px calc(50vw - 27vw - 13.5vw - 20px) 0px 0px;
+
+  font-size: min(2.5vw,25px);
 }

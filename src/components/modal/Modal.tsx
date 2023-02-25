@@ -94,7 +94,7 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
                         icon[1] == true ? (
                           <img
                             key={index}
-                            className="icon"
+                            className="icons"
                             src={`/assets/icons/dishes_types_icons/${icon[0]}.svg`}
                             alt="icons"
                           />
