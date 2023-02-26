@@ -10,7 +10,6 @@ import { RootState } from "../../store/store";
 
 const Chefs: React.FC = () => {
   const chefs = useSelector((state: RootState) => state.chefs.value);
-  console.log(chefs);
   const [boldName, setBoldName] = useState("all");
 
   return (

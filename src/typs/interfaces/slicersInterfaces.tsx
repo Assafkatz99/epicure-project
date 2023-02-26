@@ -31,4 +31,20 @@ export interface IDish {
   icons: ICons;
   sides: Array<string>;
   is_signature: boolean;
+  dishTiming: IDishTiming;
+}
+
+export interface IOrder{
+  id: number | undefined;
+  name: string| undefined;
+  img_url: string| undefined;
+  changes: Array<string>| undefined;
+  price: number| undefined;
+  sides: string| undefined;
+}
+
+export interface IDishTiming {
+  breakfast: boolean;
+  lunch: boolean;
+  dinner: boolean;
 }

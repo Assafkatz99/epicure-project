@@ -15,17 +15,17 @@ export const restaurantsSlice = createSlice({
           break;
         case "new":
           state.value = state.initialValue.filter(
-            (e) => e.opening_year >= new Date().getFullYear()
+            (rest) => rest.opening_year >= new Date().getFullYear()
           );
           break;
         case "most_popular":
-          state.value = state.initialValue.filter((e) => e.rating > 4);
+          state.value = state.initialValue.filter((rest) => rest.rating > 4);
           break;
         case "open_now":
           state.value = state.initialValue.filter(
-            (e) =>
-              e.hours[0] < new Date().getHours() &&
-              e.hours[1] > new Date().getHours()
+            (rest) =>
+              rest.hours[0] < new Date().getHours() &&
+              rest.hours[1] > new Date().getHours()
           );
           break;
       }

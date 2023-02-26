@@ -2,6 +2,7 @@
   font-family: "HelveticaNeue-Thin";
   font-weight: 200;
 }
+
 h1 {
   margin: 0;
   font-size: 1rem;
@@ -23,17 +24,6 @@ a:hover {
   cursor: pointer;
 }
 
-@media screen and(max-width:500px) {
-  h1 {
-    font-size: 24px;
-  }
-  h2 {
-    font-size: 16px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-}
 
 @font-face {
   font-family: "HelveticaNeue-Thin";

@@ -36,7 +36,7 @@
 
   letter-spacing: 0.5px;
 
-  height: 50px;
+  height: 3vw;
   transition: 0.5s;
 }
 .chef_card:hover {
@@ -44,5 +44,5 @@
 }
 .chef_card:hover .chef_name {
   cursor: pointer;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }

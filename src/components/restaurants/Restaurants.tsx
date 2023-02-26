@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Clean_button } from "../../typs/buttons/Styled_buttons";
+import { AdvancedFilterButton, Clean_button } from "../../typs/buttons/Styled_buttons";
 import Card from "../homepage/hp-components/card/Card";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
@@ -79,18 +79,16 @@ const Restaurants: React.FC = () => {
       </div>
 
       <div className="filters_second_row">
-        <div className="buttons_second_row">
-          <Clean_button>
+          <AdvancedFilterButton>
             Price Range{" "}
             <img src="assets/icons/rest_page_icons/arrow_down.svg" />
-          </Clean_button>
-          <Clean_button>
+          </AdvancedFilterButton>
+          <AdvancedFilterButton>
             Distance <img src="assets/icons/rest_page_icons/arrow_down.svg" />
-          </Clean_button>
-          <Clean_button>
+          </AdvancedFilterButton>
+          <AdvancedFilterButton>
             Rating <img src="assets/icons/rest_page_icons/arrow_down.svg" />
-          </Clean_button>
-        </div>
+          </AdvancedFilterButton>
       </div>
 
       <div className="restaurants_grid">

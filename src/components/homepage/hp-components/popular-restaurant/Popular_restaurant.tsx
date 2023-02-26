@@ -44,7 +44,7 @@ const Popular_restaurant: React.FC = () => {
             );
           })}
       </div>
-      <button>All Restaurant {">>"}</button>
+      <button onClick={() => {navigation(`/restaurants`)}}>All Restaurant {">>"}</button>
     </div>
   );
 };
