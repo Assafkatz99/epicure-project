@@ -25,3 +25,9 @@
   gap: 20px;
   width: 40vw;
 }
+
+@media screen and (max-width: 500px) {
+.apple_google_store_icons img{
+  width:50px;
+}  
+}
