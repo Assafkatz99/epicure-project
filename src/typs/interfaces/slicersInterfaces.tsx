@@ -41,6 +41,7 @@ export interface IOrder{
   changes: Array<string>| undefined;
   price: number| undefined;
   sides: string| undefined;
+  quantity: number| undefined;
 }
 
 export interface IDishTiming {

@@ -16,6 +16,10 @@ import {
 import { filterDishes } from "../../../store/slicers/dishesSilcer"
 
 const SingleRestaurant: React.FC = () => {
+  
+    const [showModal, setShowModal] = useState(false);
+    const [DishIdForModal, setDishIdForModal] = useState(0);
+    
   const dishes = useSelector((state: RootState) => state.dishes.value);
   const chefs = useSelector((state: RootState) => state.chefs.value);
   const restaurants = useSelector(
@@ -29,9 +33,6 @@ const SingleRestaurant: React.FC = () => {
     chef.restaurant_ids.includes(Number(rest_id))
   );
   const chef_name = `${chef?.first_name} ${chef?.last_name}`;
-
-  const [showModal, setShowModal] = useState(false);
-  const [DishIdForModal, setDishIdForModal] = useState(0);
 
   const handleCloseModal = () => {
     setShowModal(false);
