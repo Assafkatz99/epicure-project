@@ -9,6 +9,11 @@ import { IOrder } from "../../typs/interfaces/slicersInterfaces";
 import "./Modal.css";
 
 const Modal: React.FC<IModalProps> = (props: IModalProps) => {
+  
+  const [quantity, SetQuantity] = useState(1);
+  const [selectedSide, SetSelectedSide] = useState("");
+  const [selectedChanges, setSelectedChanges] = useState<string[]>([]);
+  
   const dispatch = useDispatch()
 
   const orders = useSelector(
@@ -24,10 +29,6 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
       return;
     }
   };
-
-  const [quantity, SetQuantity] = useState(1);
-  const [selectedSide, SetSelectedSide] = useState("");
-  const [selectedChanges, setSelectedChanges] = useState<string[]>([]);
 
 
   const handleSideChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -61,7 +62,8 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
       img_url: props.dish?.img_url,
       changes: selectedChanges,
       price: props.dish?.price,
-      sides: selectedSide
+      sides: selectedSide,
+      quantity: quantity
     }
     dispatch(setOrder(order))
 
