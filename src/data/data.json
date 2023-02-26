@@ -216,7 +216,7 @@
       "icons": {
         "isSpicy": true,
         "isVegan": false,
-        "isVegitarian": true
+        "isVegetarian": true
       },
       "sides": ["Caesar Salad"],
       "changes": [],
@@ -243,7 +243,7 @@
       "icons": {
         "isSpicy": false,
         "isVegan": true,
-        "isVegitarian": false
+        "isVegetarian": false
       },
       "sides": ["Refried Beans", "Spanish Rice"],
       "changes": ["abcd hello", "sadasddassd"],
@@ -263,7 +263,7 @@
       "icons": {
         "isSpicy": true,
         "isVegan": true,
-        "isVegitarian": true
+        "isVegetarian": true
       },
       "sides": ["Rice", "Roasted Vegetables"],
       "changes": [],
@@ -290,7 +290,7 @@
       "icons": {
         "isSpicy": false,
         "isVegan": false,
-        "isVegitarian": true
+        "isVegetarian": true
       },
       "sides": ["Rice", "Egg Rolls"],
       "changes": [],
@@ -317,11 +317,11 @@
       "icons": {
         "isSpicy": false,
         "isVegan": false,
-        "isVegitarian": false
+        "isVegetarian": false
       },
       "sides": ["Garlic Bread"],
       "changes": [],
-      "is_signature": false,
+      "is_signature": true,
       "dishTiming": {
         "breakfast": true,
         "lunch":true,

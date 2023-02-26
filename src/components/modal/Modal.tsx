@@ -18,6 +18,7 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+ 
     if (event.target === event.currentTarget) {
       props.onclick();
       return;
