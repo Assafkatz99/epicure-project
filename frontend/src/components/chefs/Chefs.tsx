@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Clean_button } from "../../typs/buttons/Styled_buttons";
 import { IChef } from "../../typs/interfaces/slicersInterfaces";
@@ -7,10 +7,18 @@ import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
 import "./Chefs.css";
 import { RootState } from "../../store/store";
+import { fetchChefs } from "../../store/slicers/chefsSlicer"
+import { useDispatch } from "react-redux";
 
 const Chefs: React.FC = () => {
-  const chefs = useSelector((state: RootState) => state.chefs.value);
   const [boldName, setBoldName] = useState("all");
+  
+  const dispatch = useDispatch()
+  const chefs = useSelector((state: RootState) => state.chefs.value);
+
+  useEffect(()=>{
+    dispatch(fetchChefs())
+  },[])
 
   return (
     <>
