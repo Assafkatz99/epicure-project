@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
               name="search"
               placeholder="Search for restaurant cuisine, chef"
             />
-            <button>
+            <button onClick={()=>{navigate("/sign-in")}}>
               <img
                 className="menu-icons"
                 src="/assets/logos/person_button.svg"

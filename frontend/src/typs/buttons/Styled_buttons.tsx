@@ -63,11 +63,17 @@ export const SignInButtons = styled.button<IColorsForSignInButtons>`
   font-size: 16px;
   color: ${props => props.backgroundColor === "white" ? "black" : "white" };
   background-color: ${props => props.backgroundColor};
-  border: ${props => props.backgroundColor === "white" ? "black 1px solid" : "none" };;
+  border: ${props => props.backgroundColor === "white" ? "black 1px solid" : "none" };
   padding: 10px 0px;
   font-family: "HelveticaNeue-Light";
   letter-spacing: 3px;
   width: 150px;
   text-align: center;
-
+  
+  &:hover {
+    background-color: ${props => props.backgroundColor === "white" ? "#343434" : "#9b9b9b" };
+    color: ${props => props.backgroundColor === "white" ? "white" : "" };
+    cursor: pointer;
+  }
 `;
+

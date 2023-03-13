@@ -1,4 +1,4 @@
-.sign_in_page{
+.sign_up_page{
     height: 100vh;
     
     display: flex;
@@ -7,7 +7,7 @@
     
 }
 
-.sign_in_div{
+.sign_up_div{
     align-self: center;
     box-shadow: -4px 4px 14px 1px #a5a5a5;
     border-radius: 5px;
@@ -24,7 +24,7 @@
 
 }
 
-.sign_in_div input{
+.sign_up_div input{
     all: none;
     border: unset;
     border-bottom: 0.5px solid black ;
@@ -32,16 +32,16 @@
     font-size: 15px;
     width: 100%;
 }
-.sign_in_div input:focus{
+.sign_up_div input:focus{
     outline: none;
 }
 
-.sign_in_div input::placeholder{
+.sign_up_div input::placeholder{
     font-size: 15px;
     letter-spacing: 1px;
 }
 
-.sign_in_div section{
+.sign_up_div section{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -63,27 +63,3 @@
     font-size: 2vw;
 }
 
-.forget_pass_button{
-    all: unset;
-    letter-spacing: 0.5px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-.or_class hr {
-    all: unset;
-    border-bottom: #979797 1px solid;
-    width: 30%;
-    position: relative;
-    top: 1px;
-}
-.or_class {
-    width: 99%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 15px;
-    color: #979797;
-  }

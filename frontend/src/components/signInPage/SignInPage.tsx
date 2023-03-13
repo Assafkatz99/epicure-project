@@ -1,14 +1,18 @@
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { SignInButtons } from "../../typs/buttons/Styled_buttons";
+import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
 import "./SignInPage.css";
 
 
 const SignInPage: React.FC = () => {
+  const navigate = useNavigate();
+
       return (
       <>
-      <Navbar ></Navbar>
       <div className="sign_in_page">
+      <Navbar ></Navbar>
         <div className="sign_in_div">
             <div className="head_part">
                 <span>SIGN IN</span>
@@ -16,7 +20,7 @@ const SignInPage: React.FC = () => {
             </div>
 
             <input placeholder="Email address" type="text"/>
-            <input placeholder="Password" type="text" />
+            <input placeholder="Password" type="password" />
             <section>
             <SignInButtons backgroundColor="grey">LOGIN</SignInButtons>
             <button className="forget_pass_button">Forget password?</button>
@@ -27,10 +31,11 @@ const SignInPage: React.FC = () => {
             <span>or</span>
             <hr />
           </div>
-          <SignInButtons backgroundColor="white">SIGN UP</SignInButtons>
+          <SignInButtons backgroundColor="white" onClick={()=>{navigate("/sign-up")}}>SIGN UP</SignInButtons>
 
 
         </div>
+      <Footer></Footer>
       </div>
       </>
       )

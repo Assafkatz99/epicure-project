@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { fetchChefs } from "./store/slicers/chefsSlicer";
 import { fetchDishes } from "./store/slicers/dishesSilcer";
 import { fetchRestaurants } from "./store/slicers/restaurantsSlicer";
+import SignUpPage from "./components/signUpPage/SignUpPage";
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
           ></Route>
           <Route path="/chefs" element={<Chefs />}></Route>
           <Route path="/sign-in" element={<SignInPage />}></Route>
+          <Route path="/sign-up" element={<SignUpPage />}></Route>
         </Routes>
       </BrowserRouter>
     </>
