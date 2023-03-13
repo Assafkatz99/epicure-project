@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import ShoppingBag from "./navbar components/shopping bag component/ShoppingBag";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
@@ -9,6 +10,7 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="navbar">
@@ -17,8 +19,7 @@ const Navbar: React.FC = () => {
           id="logo-button-id"
           onClick={() => {
             navigate("/");
-          }}
-        >
+          }}>
           <img src="/assets/logos/small-logo.svg"></img>
           <img src="/assets/logos/EPICURE-logo.svg"></img>
         </button>
@@ -27,14 +28,16 @@ const Navbar: React.FC = () => {
         <div className={`menu-left ${menuOpen ? "show" : ""}`}>
           <NavLink
             to="/restaurants"
-            className={({ isActive }) => (isActive ? "underline" : "notActive")}
-          >
+            className={({ isActive }) =>
+              isActive ? "underline" : "notActive"
+            }>
             Restaurants
           </NavLink>
           <NavLink
             to="/chefs"
-            className={({ isActive }) => (isActive ? "underline" : "notActive")}
-          >
+            className={({ isActive }) =>
+              isActive ? "underline" : "notActive"
+            }>
             Chefs
           </NavLink>
           <hr className={"menu-left-mobile"}></hr>
@@ -59,18 +62,32 @@ const Navbar: React.FC = () => {
               name="search"
               placeholder="Search for restaurant cuisine, chef"
             />
-            <button onClick={()=>{navigate("/sign-in")}}>
+            <button
+              onClick={() => {
+                navigate("/sign-in");
+              }}>
               <img
                 className="menu-icons"
                 src="/assets/logos/person_button.svg"
               />
             </button>
-            <button>
+
+            <button onClick={() => setShowModal(!showModal)}>
               <img
                 className="menu-icons"
                 src="/assets/logos/shopping_bag_button.svg"
               />
             </button>
+            {showModal && (
+              <>
+                <div
+                  className="backdrop"
+                  onClick={() => setShowModal(false)}></div>
+                <div className="modalShoppingBag">
+                  <ShoppingBag />
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

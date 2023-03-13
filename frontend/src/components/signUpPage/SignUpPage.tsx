@@ -2,13 +2,13 @@ import { UnknownAsyncThunkAction } from "@reduxjs/toolkit/dist/matchers";
 import axios from "axios";
 import React, { FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { SignInButtons } from "../../typs/buttons/Styled_buttons";
+import { GenericButtons } from "../../typs/buttons/Styled_buttons";
 import IUser from "../../typs/interfaces/IUser";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
 import "./SignUpPage.css";
 
-const SignInPage: React.FC = () => { 
+const SignInPage: React.FC = () => {
   const navigate = useNavigate()
   let user_details : IUser ={
     first_name: "",
@@ -34,11 +34,15 @@ const SignInPage: React.FC = () => {
             email: event.target[2].value,
             password: event.target[3].value
           }
-          
+
           try {
-            const response = await axios.post('http://localhost:8000/api/users/', user_details);
+            const response = await axios.post('http://localhost:8000/api/users/sign-up', user_details);
             if (response.status === 201){
               navigate("/")
+            }else{
+              alert(
+                response.data
+              )
             }
 
           } catch (error: any) {
@@ -50,7 +54,7 @@ const SignInPage: React.FC = () => {
           <input placeholder="Email address" type="text" />
           <input placeholder="Password" type="text" />
 
-          <SignInButtons backgroundColor="white" type="submit">SIGN UP</SignInButtons>
+          <GenericButtons backgroundColor="white" type="submit">SIGN UP</GenericButtons>
         </form>
         </div>
         <Footer></Footer>

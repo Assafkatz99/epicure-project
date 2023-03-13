@@ -1,21 +1,21 @@
 import express, { Request, Response } from "express";
 import { checkIfUserEmailExists, createUser } from "../services/user.service";
-const bcrypt = require('bcrypt')
-
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 export const userSignUp = async (req: Request, res: Response) => {
-    console.log(req)
+  console.log(req);
   try {
     const { first_name, last_name, email, password } = req.body;
 
     if (!(email && password && first_name && last_name)) {
-      return res.status(400).send("All input is required");
+      return res.send("All input is required");
     }
 
     const oldUser = await checkIfUserEmailExists(email);
 
     if (oldUser) {
-      return res.status(409).send("User Already Exist. Please Login");
+      return res.send("User Already Exist. Please Login");
     }
 
     const encryptedPassword = await bcrypt.hash(password, 10);
@@ -28,6 +28,33 @@ export const userSignUp = async (req: Request, res: Response) => {
     });
 
     res.status(201).send("success");
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const userSignIn = async (req: Request, res: Response) => {
+  try {
+    const { email, password } = req.body;
+
+    if (!(email && password)) {
+      return res.send("All input is required");
+    }
+
+    const user = await checkIfUserEmailExists(email);
+
+    if (user && (await bcrypt.compare(password, user.password))) {
+      const token = jwt.sign(
+        { user_id: user._id, email: email },
+        process.env.TOKEN_KEY,
+        {
+          expiresIn: "2h",
+        }
+      );
+
+      return res.status(201).json({ user: user, token: token });
+    }
+    res.send("Invalid Credentials");
   } catch (err) {
     console.log(err);
   }

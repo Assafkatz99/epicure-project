@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 interface IBold {
   bold?: boolean;
 }
-interface IColorsForSignInButtons {
+interface IColorsForGenericButtons {
   backgroundColor: string;
 }
 
@@ -58,7 +58,7 @@ export const AddToBagButton = styled.button<IClickedAddToBag>`
 
 
 
-export const SignInButtons = styled.button<IColorsForSignInButtons>`
+export const GenericButtons = styled.button<IColorsForGenericButtons>`
   all: unset;
   font-size: 16px;
   color: ${props => props.backgroundColor === "white" ? "black" : "white" };
@@ -68,8 +68,9 @@ export const SignInButtons = styled.button<IColorsForSignInButtons>`
   font-family: "HelveticaNeue-Light";
   letter-spacing: 3px;
   width: 150px;
+  min-width: fit-content;
   text-align: center;
-  
+
   &:hover {
     background-color: ${props => props.backgroundColor === "white" ? "#343434" : "#9b9b9b" };
     color: ${props => props.backgroundColor === "white" ? "white" : "" };
@@ -77,3 +78,11 @@ export const SignInButtons = styled.button<IColorsForSignInButtons>`
   }
 `;
 
+export const ShoppingBagButtons = styled(GenericButtons)`
+
+font-size: 18px;
+width: 210px ;
+font-weight:bold;
+border: black 1px solid;
+
+`
