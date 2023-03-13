@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../card/Card";
 import "../popular-restaurant/Popular_restaurant.css";
 import Modal from "../../../modal/Modal";
@@ -6,10 +6,11 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../../store/store";
 import { IDish } from "../../../../typs/interfaces/slicersInterfaces";
 import { ICons } from "../../../../typs/interfaces/ICard";
+import { useDispatch } from "react-redux";
+import { fetchDishes } from "../../../../store/slicers/dishesSilcer";
 
 const Popular_dishes: React.FC = () => {
   const dishes = useSelector((state: RootState) => state.dishes.value);
-
   const [showModal, setShowModal] = useState(false);
   const [DishIdForModal, setDishIdForModal] = useState(0);
   const handleCloseModal = () => {

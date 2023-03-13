@@ -1,11 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
-import data from "../../data/data.json";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+import { IRestaurant } from "../../typs/interfaces/slicersInterfaces";
+
+export const fetchRestaurants: any = createAsyncThunk(
+  "restaurants/fetchRestaurants",
+  async () => {
+    const response = await axios.get("http://localhost:8000/api/restaurants/");
+    return response.data;
+  }
+);
 
 export const restaurantsSlice = createSlice({
   name: "restaurants",
   initialState: {
-    initialValue: data.restaurants,
-    value: data.restaurants,
+    initialValue: [],
+    value: [],
   },
   reducers: {
     filter: (state, action) => {
@@ -15,15 +24,15 @@ export const restaurantsSlice = createSlice({
           break;
         case "new":
           state.value = state.initialValue.filter(
-            (rest) => rest.opening_year >= new Date().getFullYear()
+            (rest : IRestaurant) => rest.opening_year >= new Date().getFullYear()
           );
           break;
         case "most_popular":
-          state.value = state.initialValue.filter((rest) => rest.rating > 4);
+          state.value = state.initialValue.filter((rest : IRestaurant) => rest.rating > 4);
           break;
         case "open_now":
           state.value = state.initialValue.filter(
-            (rest) =>
+            (rest : IRestaurant) =>
               rest.hours[0] < new Date().getHours() &&
               rest.hours[1] > new Date().getHours()
           );
@@ -31,6 +40,22 @@ export const restaurantsSlice = createSlice({
       }
     },
   },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchRestaurants.pending, (state, action) => {
+        console.log("pending")
+      })
+      .addCase(fetchRestaurants.fulfilled, (state, action) => {
+        state.value = action.payload;
+        state.initialValue = action.payload;
+        console.log(action.payload);
+        console.log("WORKED");
+      })
+      .addCase(fetchRestaurants.rejected, (state, action) => {
+        console.log("rejected");
+        console.log(action.error.message);
+      });
+    }
 });
 
 export const { filter } = restaurantsSlice.actions;

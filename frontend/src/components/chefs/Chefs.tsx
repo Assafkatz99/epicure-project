@@ -12,13 +12,9 @@ import { useDispatch } from "react-redux";
 
 const Chefs: React.FC = () => {
   const [boldName, setBoldName] = useState("all");
-  
-  const dispatch = useDispatch()
+
   const chefs = useSelector((state: RootState) => state.chefs.value);
 
-  useEffect(()=>{
-    dispatch(fetchChefs())
-  },[])
 
   return (
     <>

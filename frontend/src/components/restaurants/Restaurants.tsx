@@ -6,10 +6,11 @@ import Navbar from "../navbar/Navbar";
 
 import "./restaurants.css";
 import { useDispatch, useSelector } from "react-redux";
-import { filter } from "../../store/slicers/restaurantsSlicer";
+import { fetchRestaurants, filter } from "../../store/slicers/restaurantsSlicer";
 import { useNavigate, NavLink } from "react-router-dom";
 import { RootState } from "../../store/store";
 import { IChef, IRestaurant } from "../../typs/interfaces/slicersInterfaces";
+import { fetchChefs } from "../../store/slicers/chefsSlicer";
 
 const Restaurants: React.FC = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const Restaurants: React.FC = () => {
     (state: RootState) => state.restaurants.value
   );
   const chefs = useSelector((state: RootState) => state.chefs.initialValue);
+
   const [boldName, setBoldName] = useState("all");
   useEffect(() => {
     dispatch(filter(boldName));

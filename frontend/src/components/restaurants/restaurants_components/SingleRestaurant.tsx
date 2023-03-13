@@ -13,25 +13,31 @@ import {
   IDish,
   IRestaurant,
 } from "../../../typs/interfaces/slicersInterfaces";
-import { filterDishes } from "../../../store/slicers/dishesSilcer"
+import { fetchDishes, filterDishes } from "../../../store/slicers/dishesSilcer"
+import { fetchChefs } from "../../../store/slicers/chefsSlicer";
 
 const SingleRestaurant: React.FC = () => {
   
-    const [showModal, setShowModal] = useState(false);
-    const [DishIdForModal, setDishIdForModal] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [DishIdForModal, setDishIdForModal] = useState(0);
     
   const dishes = useSelector((state: RootState) => state.dishes.value);
   const chefs = useSelector((state: RootState) => state.chefs.value);
   const restaurants = useSelector(
     (state: RootState) => state.restaurants.value
   );
+
+
   const rest_id = useParams()["single"] as unknown as number;
+
   const specific_rest = restaurants.find(
     (rest: IRestaurant) => rest.id == rest_id
   );
+
   const chef = chefs.find((chef: IChef) =>
-    chef.restaurant_ids.includes(Number(rest_id))
-  );
+  chef.restaurant_ids && chef.restaurant_ids.includes(Number(rest_id))
+);
+
   const chef_name = `${chef?.first_name} ${chef?.last_name}`;
 
   const handleCloseModal = () => {

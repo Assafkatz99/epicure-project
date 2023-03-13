@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Chef_img_card from "../Chef_img_card/Chef_img_card";
 import Small_rest_card from "../small_rest_card/Small_rest_card";
 

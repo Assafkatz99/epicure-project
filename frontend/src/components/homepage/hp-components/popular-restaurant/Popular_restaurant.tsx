@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../card/Card";
 import "./Popular_restaurant.css";
 
@@ -10,12 +10,12 @@ import {
   IRestaurant,
 } from "../../../../typs/interfaces/slicersInterfaces";
 
+
 const Popular_restaurant: React.FC = () => {
   const chefs = useSelector((state: RootState) => state.chefs.initialValue);
   const restaurants = useSelector(
     (state: RootState) => state.restaurants.value
   );
-
   const navigation = useNavigate();
   return (
     <div className="popular_restaurant">

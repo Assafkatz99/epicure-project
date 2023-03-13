@@ -21,7 +21,7 @@ const chefsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchChefs.pending, (state, action) => {
-        
+        console.log("pending")
       })
       .addCase(fetchChefs.fulfilled, (state, action) => {
         state.value = action.payload;
@@ -31,8 +31,7 @@ const chefsSlice = createSlice({
       })
       .addCase(fetchChefs.rejected, (state, action) => {
         console.log("rejected");
-        // state.isLoading = false;
-        //console.log(action.error.message);
+        console.log(action.error.message);
       });
   },
 });

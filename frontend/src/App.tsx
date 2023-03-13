@@ -7,6 +7,10 @@ import Chefs from "./components/chefs/Chefs";
 import SingleRestaurant from "./components/restaurants/restaurants_components/SingleRestaurant";
 import { useEffect } from "react";
 import SignInPage from "./components/signInPage/SignInPage";
+import { useDispatch } from "react-redux";
+import { fetchChefs } from "./store/slicers/chefsSlicer";
+import { fetchDishes } from "./store/slicers/dishesSilcer";
+import { fetchRestaurants } from "./store/slicers/restaurantsSlicer";
 
 function App() {
   useEffect(() => {
@@ -14,6 +18,15 @@ function App() {
       window.scrollTo(0, 0);
     });
   }, []);
+
+  const dispatch = useDispatch()
+
+  useEffect(()=>{
+    dispatch(fetchChefs())
+    dispatch(fetchDishes())
+    dispatch(fetchRestaurants())
+  },[])
+  
   return (
     <>
       <BrowserRouter>
