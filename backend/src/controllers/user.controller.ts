@@ -20,14 +20,14 @@ export const userSignUp = async (req: Request, res: Response) => {
 
     const encryptedPassword = await bcrypt.hash(password, 10);
 
-    const user = await createUser({
+    await createUser({
       first_name: first_name,
       last_name: last_name,
       email: email.toLowerCase(),
       password: encryptedPassword,
     });
 
-    res.status(201);
+    res.status(201).send("success");
   } catch (err) {
     console.log(err);
   }
