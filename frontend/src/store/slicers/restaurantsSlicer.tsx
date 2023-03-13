@@ -43,16 +43,12 @@ export const restaurantsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchRestaurants.pending, (state, action) => {
-        console.log("pending")
       })
       .addCase(fetchRestaurants.fulfilled, (state, action) => {
         state.value = action.payload;
         state.initialValue = action.payload;
-        console.log(action.payload);
-        console.log("WORKED");
       })
       .addCase(fetchRestaurants.rejected, (state, action) => {
-        console.log("rejected");
         console.log(action.error.message);
       });
     }

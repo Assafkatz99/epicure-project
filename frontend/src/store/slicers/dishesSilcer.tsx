@@ -39,16 +39,12 @@ filterDishes: (state, action) => {
   extraReducers: (builder) => {
     builder
       .addCase(fetchDishes.pending, (state, action) => {
-        console.log("pending")
       })
       .addCase(fetchDishes.fulfilled, (state, action) => {
         state.value = action.payload;
         state.initialValue = action.payload;
-        console.log(action.payload);
-        console.log("WORKED");
       })
       .addCase(fetchDishes.rejected, (state, action) => {
-        console.log("rejected");
         console.log(action.error.message);
       });
   },
