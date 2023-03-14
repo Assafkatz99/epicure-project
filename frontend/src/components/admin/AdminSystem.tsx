@@ -4,6 +4,8 @@ import { RootState } from "../../store/store";
 import { Clean_button } from "../../typs/buttons/Styled_buttons";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
+import ShoppingBag from "../navbar/navbar components/shopping bag component/ShoppingBag";
+import AddPutComponent from "./admin component/AddPutComponent";
 import "./AdminSystem.css";
 
 const AdminSystem: React.FC = () => {
@@ -13,6 +15,8 @@ const AdminSystem: React.FC = () => {
     (state: RootState) => state.restaurants.value
   );
   const dishes = useSelector((state: RootState) => state.dishes.value);
+
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="admin_page">
@@ -88,7 +92,7 @@ const AdminSystem: React.FC = () => {
                         </th>
                         <th>{chef.restaurant_ids.join(", ")}</th>
                         <th>
-                          <button onClick={() => {}}>
+                          <button onClick={() => {setShowModal(true)}}>
                             <img
                               style={{ width: "50px", height: "50px" }}
                               src="/assets/icons/admin/edit.svg"
@@ -239,14 +243,14 @@ const AdminSystem: React.FC = () => {
                         </th>
                         <th>{dish.price}</th>
                         <th style={{ textOverflow: "unset" }}>
-                          {Object.keys(dish.icons)
-                            .filter((item) => item !== "_id")
+                          {Object.entries(dish.icons)
+                            .filter((item) => item[0] !== "_id" && item[1] == true)
                             .map((type) => (
                               <img
                                 className="admin_table_icons"
                                 src={
                                   "assets/icons/dishes_types_icons/" +
-                                  type +
+                                  type[0] +
                                   ".svg"
                                 }
                                 alt="icon_source"
@@ -295,6 +299,19 @@ const AdminSystem: React.FC = () => {
               </table>
             </div>
           )}
+
+{showModal && (
+              <>
+                <div
+                  className="backdrop"
+                  onClick={() => setShowModal(false)}
+                ></div>
+                <div className="modalAddingEditing">
+                <AddPutComponent type={"chef"} action="Add"/>
+                </div>
+              </>
+            )}
+
         </div>
       </section>
       <Footer />
