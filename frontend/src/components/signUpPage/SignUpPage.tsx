@@ -43,7 +43,12 @@ const SignInPage: React.FC = () => {
                 );
                 if (response.status === 201) {
                   navigate("/");
-                } else {
+                }else if(response.status === 202){
+                  alert(response.data);
+                  navigate("/sign-in")
+
+                } 
+                else {
                   alert(response.data);
                 }
               } catch (error: any) {

@@ -15,7 +15,7 @@ export const userSignUp = async (req: Request, res: Response) => {
     const oldUser = await checkIfUserEmailExists(email);
 
     if (oldUser) {
-      return res.send("User Already Exist. Please Login");
+      return res.status(202).send("User Already Exist. Please SignIn");
     }
 
     const encryptedPassword = await bcrypt.hash(password, 10);
