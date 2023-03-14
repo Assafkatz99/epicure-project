@@ -17,6 +17,7 @@ const AdminSystem: React.FC = () => {
   const dishes = useSelector((state: RootState) => state.dishes.value);
 
   const [showModal, setShowModal] = useState(false);
+  const [modalComponent, setModalComponent] = useState(<></>);
 
   return (
     <div className="admin_page">
@@ -92,7 +93,18 @@ const AdminSystem: React.FC = () => {
                         </th>
                         <th>{chef.restaurant_ids.join(", ")}</th>
                         <th>
-                          <button onClick={() => {setShowModal(true)}}>
+                          <button
+                            onClick={() => {
+                              setModalComponent(
+                                <AddPutComponent
+                                  type={"chef"}
+                                  action={"Put"}
+                                  _id={"ididididididi"}
+                                />
+                              );
+                              setShowModal(true);
+                            }}
+                          >
                             <img
                               style={{ width: "50px", height: "50px" }}
                               src="/assets/icons/admin/edit.svg"
@@ -100,7 +112,17 @@ const AdminSystem: React.FC = () => {
                           </button>
                         </th>
                         <th>
-                          <button onClick={() => {}}>
+                          <button
+                            onClick={() => {
+                              setModalComponent(
+                                <AddPutComponent
+                                  type={"chef"}
+                                  action={"Put"}
+                                />
+                              );
+                              setShowModal(true);
+                            }}
+                          >
                             <img
                               style={{ width: "30px", height: "30px" }}
                               src="/assets/icons/admin/delete.svg"
@@ -244,7 +266,9 @@ const AdminSystem: React.FC = () => {
                         <th>{dish.price}</th>
                         <th style={{ textOverflow: "unset" }}>
                           {Object.entries(dish.icons)
-                            .filter((item) => item[0] !== "_id" && item[1] == true)
+                            .filter(
+                              (item) => item[0] !== "_id" && item[1] == true
+                            )
                             .map((type) => (
                               <img
                                 className="admin_table_icons"
@@ -300,18 +324,15 @@ const AdminSystem: React.FC = () => {
             </div>
           )}
 
-{showModal && (
-              <>
-                <div
-                  className="backdrop"
-                  onClick={() => setShowModal(false)}
-                ></div>
-                <div className="modalAddingEditing">
-                <AddPutComponent type={"chef"} action="Add"/>
-                </div>
-              </>
-            )}
-
+          {showModal && (
+            <>
+              <div
+                className="backdrop"
+                onClick={() => setShowModal(false)}
+              ></div>
+              <div className="modalAddingEditing">{modalComponent}</div>
+            </>
+          )}
         </div>
       </section>
       <Footer />
