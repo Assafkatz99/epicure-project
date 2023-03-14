@@ -42,7 +42,6 @@ function App() {
           <Route path="/chefs" element={<Chefs />}></Route>
           <Route path="/sign-in" element={<SignInPage />}></Route>
           <Route path="/sign-up" element={<SignUpPage />}></Route>
-          <Route path="/shoppingbag" element={<ShoppingBag />}></Route>
         </Routes>
       </BrowserRouter>
     </>
