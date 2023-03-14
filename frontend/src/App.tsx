@@ -13,6 +13,7 @@ import { fetchDishes } from "./store/slicers/dishesSilcer";
 import { fetchRestaurants } from "./store/slicers/restaurantsSlicer";
 import SignUpPage from "./components/signUpPage/SignUpPage";
 import ShoppingBag from "./components/navbar/navbar components/shopping bag component/ShoppingBag";
+import AdminSystem from "./components/admin/AdminSystem";
 
 function App() {
   useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
           <Route path="/chefs" element={<Chefs />}></Route>
           <Route path="/sign-in" element={<SignInPage />}></Route>
           <Route path="/sign-up" element={<SignUpPage />}></Route>
+          <Route path="/admin" element={<AdminSystem />}></Route>
         </Routes>
       </BrowserRouter>
     </>
