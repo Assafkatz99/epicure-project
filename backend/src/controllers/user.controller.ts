@@ -15,7 +15,7 @@ export const userSignUp = async (req: Request, res: Response) => {
     const oldUser = await checkIfUserEmailExists(email);
 
     if (oldUser) {
-      return res.status(202).send("User Already Exist. Please SignIn");
+      return res.status(201).send("User Already Exist. Please SignIn");
     }
 
     const encryptedPassword = await bcrypt.hash(password, 10);
@@ -27,7 +27,7 @@ export const userSignUp = async (req: Request, res: Response) => {
       password: encryptedPassword,
     });
 
-    res.status(201).send("success");
+    res.status(201).send("Welcome! Please sign-in");
   } catch (err) {
     console.log(err);
   }
@@ -51,7 +51,7 @@ export const userSignIn = async (req: Request, res: Response) => {
           expiresIn: "2h",
         }
       );
-
+      
       return res.status(201).json({ user: user, token: token });
     }
     res.send("Invalid Credentials");

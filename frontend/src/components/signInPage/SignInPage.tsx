@@ -23,7 +23,7 @@ const SignInPage: React.FC = () => {
       if (response.status === 201) {
         sessionStorage.setItem("user", JSON.stringify(response.data));
 
-        alert("great! you are in!");
+        alert("Welcome!");
 
         navigate("/");
       } else {

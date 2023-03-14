@@ -12,6 +12,9 @@ const Navbar: React.FC = () => {
   };
   const [showModal, setShowModal] = useState(false);
 
+  const userString = sessionStorage.getItem("user");
+  const user = userString ? JSON.parse(userString) : null;
+
   return (
     <div className="navbar">
       <div>
@@ -50,7 +53,7 @@ const Navbar: React.FC = () => {
             Privacy Policy
           </NavLink>
         </div>
-
+          {user && <span style={{color:"blue"}}>Welcome, {user.user.first_name}!</span>}
         <div className="menu-right">
           <button className="hamburger-button" onClick={toggleMenu}>
             <img src="/assets/logos/hamburger-icon.svg" />
