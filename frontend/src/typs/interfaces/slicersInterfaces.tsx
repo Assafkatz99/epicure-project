@@ -34,14 +34,14 @@ export interface IDish {
   dishTiming: IDishTiming;
 }
 
-export interface IOrder{
+export interface IOrder {
   id: number | undefined;
-  name: string| undefined;
-  img_url: string| undefined;
-  changes: Array<string>| undefined;
-  price: number| undefined;
-  sides: string| undefined;
-  quantity: number| undefined;
+  name: string | undefined;
+  img_url: string | undefined;
+  changes: Array<string> | undefined;
+  price: number | undefined;
+  sides: string | undefined;
+  quantity: number | undefined;
 }
 
 export interface IDishTiming {

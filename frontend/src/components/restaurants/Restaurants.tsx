@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { AdvancedFilterButton, Clean_button } from "../../typs/buttons/Styled_buttons";
+import {
+  AdvancedFilterButton,
+  Clean_button,
+} from "../../typs/buttons/Styled_buttons";
 import Card from "../homepage/hp-components/card/Card";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
 
 import "./restaurants.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRestaurants, filter } from "../../store/slicers/restaurantsSlicer";
+import {
+  fetchRestaurants,
+  filter,
+} from "../../store/slicers/restaurantsSlicer";
 import { useNavigate, NavLink } from "react-router-dom";
 import { RootState } from "../../store/store";
 import { IChef, IRestaurant } from "../../typs/interfaces/slicersInterfaces";
@@ -81,16 +87,15 @@ const Restaurants: React.FC = () => {
       </div>
 
       <div className="filters_second_row">
-          <AdvancedFilterButton>
-            Price Range{" "}
-            <img src="assets/icons/rest_page_icons/arrow_down.svg" />
-          </AdvancedFilterButton>
-          <AdvancedFilterButton>
-            Distance <img src="assets/icons/rest_page_icons/arrow_down.svg" />
-          </AdvancedFilterButton>
-          <AdvancedFilterButton>
-            Rating <img src="assets/icons/rest_page_icons/arrow_down.svg" />
-          </AdvancedFilterButton>
+        <AdvancedFilterButton>
+          Price Range <img src="assets/icons/rest_page_icons/arrow_down.svg" />
+        </AdvancedFilterButton>
+        <AdvancedFilterButton>
+          Distance <img src="assets/icons/rest_page_icons/arrow_down.svg" />
+        </AdvancedFilterButton>
+        <AdvancedFilterButton>
+          Rating <img src="assets/icons/rest_page_icons/arrow_down.svg" />
+        </AdvancedFilterButton>
       </div>
 
       <div className="restaurants_grid">

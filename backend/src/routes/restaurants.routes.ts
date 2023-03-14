@@ -3,6 +3,6 @@ import { getAllRestaurants } from "../controllers/restaurant.controller";
 
 const restaurantRouter = express.Router();
 
-restaurantRouter.get("/",getAllRestaurants);
+restaurantRouter.get("/", getAllRestaurants);
 
-export default restaurantRouter
+export default restaurantRouter;

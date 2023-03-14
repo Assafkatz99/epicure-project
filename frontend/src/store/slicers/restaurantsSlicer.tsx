@@ -24,15 +24,17 @@ export const restaurantsSlice = createSlice({
           break;
         case "new":
           state.value = state.initialValue.filter(
-            (rest : IRestaurant) => rest.opening_year >= new Date().getFullYear()
+            (rest: IRestaurant) => rest.opening_year >= new Date().getFullYear()
           );
           break;
         case "most_popular":
-          state.value = state.initialValue.filter((rest : IRestaurant) => rest.rating > 4);
+          state.value = state.initialValue.filter(
+            (rest: IRestaurant) => rest.rating > 4
+          );
           break;
         case "open_now":
           state.value = state.initialValue.filter(
-            (rest : IRestaurant) =>
+            (rest: IRestaurant) =>
               rest.hours[0] < new Date().getHours() &&
               rest.hours[1] > new Date().getHours()
           );
@@ -42,8 +44,7 @@ export const restaurantsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchRestaurants.pending, (state, action) => {
-      })
+      .addCase(fetchRestaurants.pending, (state, action) => {})
       .addCase(fetchRestaurants.fulfilled, (state, action) => {
         state.value = action.payload;
         state.initialValue = action.payload;
@@ -51,7 +52,7 @@ export const restaurantsSlice = createSlice({
       .addCase(fetchRestaurants.rejected, (state, action) => {
         console.log(action.error.message);
       });
-    }
+  },
 });
 
 export const { filter } = restaurantsSlice.actions;

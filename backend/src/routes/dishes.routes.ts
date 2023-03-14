@@ -3,6 +3,6 @@ import { getAllDishes } from "../controllers/dishes.controller";
 
 const DishRouter = express.Router();
 
-DishRouter.get("/",getAllDishes);
+DishRouter.get("/", getAllDishes);
 
-export default DishRouter
+export default DishRouter;

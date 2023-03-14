@@ -29,12 +29,12 @@
   justify-content: center;
 }
 
-h1{
+h1 {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.open_now_img{
+.open_now_img {
   height: 15px;
 }

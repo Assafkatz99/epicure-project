@@ -24,16 +24,13 @@ export const createUser = async (user: IUser) => {
   }
 };
 
-  export const checkIfUserEmailExists = async (email:string) => {
+export const checkIfUserEmailExists = async (email: string) => {
   try {
     const checking_email = await UserModel.findOne({ email });
-    console.log(checking_email)
-    return checking_email
+    console.log(checking_email);
+    return checking_email;
   } catch (err) {
     console.log(err);
     throw err;
   }
 };
-
-
-

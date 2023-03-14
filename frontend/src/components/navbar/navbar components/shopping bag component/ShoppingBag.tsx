@@ -7,51 +7,68 @@ import { IOrder } from "../../../../typs/interfaces/slicersInterfaces";
 import "./ShoppingBag.css";
 import ShoppingBagCard from "./ShoppingBagCard component/ShoppingBagCard";
 
-
 const ShoppingBag: React.FC = () => {
-    const orders = useSelector(
-        (state: RootState) => state.orders.value
-      );
-      const [orderTotalPrice, SetOrderTotalPrice] = useState(0)
-      useEffect(()=>{
-        let orders_total_amount = orders.reduce((acc, curr:any) => acc + (curr.price*curr.quantity), 0)
-        SetOrderTotalPrice(orders_total_amount)
-      },[orders])
-      const userString = sessionStorage.getItem("user");
-      const user = userString ? JSON.parse(userString) : null;
-        console.log(user)
-      return (<div className="shopping_bag">
-        {orders.length === 0 &&
+  const orders = useSelector((state: RootState) => state.orders.value);
+  const [orderTotalPrice, SetOrderTotalPrice] = useState(0);
+  useEffect(() => {
+    let orders_total_amount = orders.reduce(
+      (acc, curr: any) => acc + curr.price * curr.quantity,
+      0
+    );
+    SetOrderTotalPrice(orders_total_amount);
+  }, [orders]);
+  const userString = sessionStorage.getItem("user");
+  const user = userString ? JSON.parse(userString) : null;
+  console.log(user);
+  return (
+    <div className="shopping_bag">
+      {orders.length === 0 && (
         <>
-        <div className="empty_bag_div">
+          <div className="empty_bag_div">
             <img src="/assets/logos/big_grey_shopping_bag.svg"></img>
             <span>YOUR BAG IS EMPTY</span>
-        </div>
-        <ShoppingBagButtons backgroundColor="white">ORDER HISTORY</ShoppingBagButtons>
+          </div>
+          <ShoppingBagButtons backgroundColor="white">
+            ORDER HISTORY
+          </ShoppingBagButtons>
         </>
-        }
-        {orders.length >= 1 &&
+      )}
+      {orders.length >= 1 && (
         <>
-        <h3 style={{fontWeight:"bold", letterSpacing:"0.8px"}}>YOUR ORDER</h3>
-        {user != null && <h2 style={{color:"grey"}}>{user.user.first_name}</h2>}
-        <div className="dishes_div">
-            {orders.map((order:any)=>{
-               return <ShoppingBagCard order={order} />
+          <h3 style={{ fontWeight: "bold", letterSpacing: "0.8px" }}>
+            YOUR ORDER
+          </h3>
+          {user != null && (
+            <h2 style={{ color: "grey" }}>{user.user.first_name}</h2>
+          )}
+          <div className="dishes_div">
+            {orders.map((order: any) => {
+              return <ShoppingBagCard order={order} />;
             })}
-        </div>
-        <hr className="horizontal_line"></hr>
-        <h2 style={{fontWeight:"bold", letterSpacing:"0.8px"}}>Add A Comment</h2>
-        <textarea placeholder="Special requests, allergies, detary restrictions, etc." ></textarea>
-        <div className="shopping_bag_buttons">
-        <ShoppingBagButtons className="shopping_bag_buttons" backgroundColor="black">CHECKOUT ₪{orderTotalPrice}</ShoppingBagButtons>
-        <ShoppingBagButtons className="shopping_bag_buttons" backgroundColor="white">ORDER HISTORY</ShoppingBagButtons>
-
-        </div>
-
+          </div>
+          <hr className="horizontal_line"></hr>
+          <h2 style={{ fontWeight: "bold", letterSpacing: "0.8px" }}>
+            Add A Comment
+          </h2>
+          <textarea placeholder="Special requests, allergies, detary restrictions, etc."></textarea>
+          <div className="shopping_bag_buttons">
+            <ShoppingBagButtons
+              className="shopping_bag_buttons"
+              backgroundColor="black"
+            >
+              CHECKOUT ₪{orderTotalPrice}
+            </ShoppingBagButtons>
+            <ShoppingBagButtons
+              className="shopping_bag_buttons"
+              backgroundColor="white"
+            >
+              ORDER HISTORY
+            </ShoppingBagButtons>
+          </div>
         </>
-        }
-        </div>
-      )
-    }
+      )}
+    </div>
+  );
+};
 
 export default ShoppingBag;

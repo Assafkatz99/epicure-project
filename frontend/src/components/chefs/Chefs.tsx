@@ -7,14 +7,13 @@ import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
 import "./Chefs.css";
 import { RootState } from "../../store/store";
-import { fetchChefs } from "../../store/slicers/chefsSlicer"
+import { fetchChefs } from "../../store/slicers/chefsSlicer";
 import { useDispatch } from "react-redux";
 
 const Chefs: React.FC = () => {
   const [boldName, setBoldName] = useState("all");
 
   const chefs = useSelector((state: RootState) => state.chefs.value);
-
 
   return (
     <>

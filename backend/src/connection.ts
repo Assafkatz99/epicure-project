@@ -1,7 +1,7 @@
 import { connect } from "mongoose";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 
-dotenv.config()
+dotenv.config();
 const uri = process.env.TOKEN_SECRET;
 
 const dbName = "EpicureDB";

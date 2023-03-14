@@ -10,7 +10,6 @@ import {
   IRestaurant,
 } from "../../../../typs/interfaces/slicersInterfaces";
 
-
 const Popular_restaurant: React.FC = () => {
   const chefs = useSelector((state: RootState) => state.chefs.initialValue);
   const restaurants = useSelector(
@@ -44,7 +43,13 @@ const Popular_restaurant: React.FC = () => {
             );
           })}
       </div>
-      <button onClick={() => {navigation(`/restaurants`)}}>All Restaurant {">>"}</button>
+      <button
+        onClick={() => {
+          navigation(`/restaurants`);
+        }}
+      >
+        All Restaurant {">>"}
+      </button>
     </div>
   );
 };

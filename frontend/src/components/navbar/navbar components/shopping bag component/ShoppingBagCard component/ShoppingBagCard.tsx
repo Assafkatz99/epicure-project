@@ -25,7 +25,8 @@ const ShoppingBagCard: React.FC<ShoppingBagCardProps> = (props) => {
                 fontWeight: "bold",
                 letterSpacing: "0.8px",
                 fontSize: "20px",
-              }}>
+              }}
+            >
               {props.order.name}
             </h1>
             <span>₪{props.order.price}.00</span>
@@ -33,12 +34,14 @@ const ShoppingBagCard: React.FC<ShoppingBagCardProps> = (props) => {
         </div>
         <span>{orderChanges}</span>
       </div>
-      <h1 className="right_button_price"
+      <h1
+        className="right_button_price"
         style={{
           fontWeight: "bold",
           letterSpacing: "0.8px",
           fontSize: "20px",
-        }}>
+        }}
+      >
         ₪
         {props.order.quantity &&
           props.order.price &&

@@ -3,6 +3,6 @@ import { getAllChefs } from "../controllers/chef.controller";
 
 const chefRouter = express.Router();
 
-chefRouter.get("/",getAllChefs);
+chefRouter.get("/", getAllChefs);
 
-export default chefRouter
+export default chefRouter;

@@ -21,13 +21,13 @@ function App() {
     });
   }, []);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  useEffect(()=>{
-    dispatch(fetchChefs())
-    dispatch(fetchDishes())
-    dispatch(fetchRestaurants())
-  },[])
+  useEffect(() => {
+    dispatch(fetchChefs());
+    dispatch(fetchDishes());
+    dispatch(fetchRestaurants());
+  }, []);
 
   return (
     <>

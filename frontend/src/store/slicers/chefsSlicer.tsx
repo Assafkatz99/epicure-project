@@ -20,8 +20,7 @@ const chefsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchChefs.pending, (state, action) => {
-      })
+      .addCase(fetchChefs.pending, (state, action) => {})
       .addCase(fetchChefs.fulfilled, (state, action) => {
         state.value = action.payload;
         state.initialValue = action.payload;

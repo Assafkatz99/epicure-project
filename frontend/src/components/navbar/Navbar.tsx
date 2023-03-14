@@ -19,7 +19,8 @@ const Navbar: React.FC = () => {
           id="logo-button-id"
           onClick={() => {
             navigate("/");
-          }}>
+          }}
+        >
           <img src="/assets/logos/small-logo.svg"></img>
           <img src="/assets/logos/EPICURE-logo.svg"></img>
         </button>
@@ -28,16 +29,14 @@ const Navbar: React.FC = () => {
         <div className={`menu-left ${menuOpen ? "show" : ""}`}>
           <NavLink
             to="/restaurants"
-            className={({ isActive }) =>
-              isActive ? "underline" : "notActive"
-            }>
+            className={({ isActive }) => (isActive ? "underline" : "notActive")}
+          >
             Restaurants
           </NavLink>
           <NavLink
             to="/chefs"
-            className={({ isActive }) =>
-              isActive ? "underline" : "notActive"
-            }>
+            className={({ isActive }) => (isActive ? "underline" : "notActive")}
+          >
             Chefs
           </NavLink>
           <hr className={"menu-left-mobile"}></hr>
@@ -65,7 +64,8 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => {
                 navigate("/sign-in");
-              }}>
+              }}
+            >
               <img
                 className="menu-icons"
                 src="/assets/logos/person_button.svg"
@@ -82,7 +82,8 @@ const Navbar: React.FC = () => {
               <>
                 <div
                   className="backdrop"
-                  onClick={() => setShowModal(false)}></div>
+                  onClick={() => setShowModal(false)}
+                ></div>
                 <div className="modalShoppingBag">
                   <ShoppingBag />
                 </div>

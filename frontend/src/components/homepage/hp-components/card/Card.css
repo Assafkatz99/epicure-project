@@ -52,7 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:1vw;
+  gap: 1vw;
 }
 
 .card_bottom_div hr {
@@ -81,7 +81,7 @@
 
 .rating,
 .icon {
-  height: clamp(15px,3vw,40px);
+  height: clamp(15px, 3vw, 40px);
 }
 
 .card div p {

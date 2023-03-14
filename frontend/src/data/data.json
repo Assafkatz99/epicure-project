@@ -92,7 +92,7 @@
       "hours": [9, 21],
       "address": "6640 Washington St, Yountville, CA 94599",
       "rating": 5,
-      "dish_ids": [1, 2, 1, 2,4],
+      "dish_ids": [1, 2, 1, 2, 4],
       "opening_year": 2023
     },
     {
@@ -103,7 +103,7 @@
       "hours": [11, 21],
       "address": "10 Columbus Circle, New York, NY 10019",
       "rating": 4,
-      "dish_ids": [3,5,4,6,7,8,5,1,4],
+      "dish_ids": [3, 5, 4, 6, 7, 8, 5, 1, 4],
       "opening_year": 2020
     },
     {
@@ -136,7 +136,7 @@
       "hours": [11, 21],
       "address": "10 Columbus Circle, New York, NY 10019",
       "rating": 4,
-      "dish_ids": [3, 1,5,4,8,9,4,4],
+      "dish_ids": [3, 1, 5, 4, 8, 9, 4, 4],
       "opening_year": 2013
     },
     {
@@ -223,7 +223,7 @@
       "is_signature": true,
       "dishTiming": {
         "breakfast": true,
-        "lunch":false,
+        "lunch": false,
         "dinner": true
       }
     },
@@ -250,7 +250,7 @@
       "is_signature": true,
       "dishTiming": {
         "breakfast": true,
-        "lunch":false,
+        "lunch": false,
         "dinner": true
       }
     },
@@ -270,7 +270,7 @@
       "is_signature": true,
       "dishTiming": {
         "breakfast": true,
-        "lunch":false,
+        "lunch": false,
         "dinner": true
       }
     },
@@ -297,7 +297,7 @@
       "is_signature": true,
       "dishTiming": {
         "breakfast": false,
-        "lunch":true,
+        "lunch": true,
         "dinner": true
       }
     },
@@ -324,7 +324,7 @@
       "is_signature": true,
       "dishTiming": {
         "breakfast": true,
-        "lunch":true,
+        "lunch": true,
         "dinner": false
       }
     }

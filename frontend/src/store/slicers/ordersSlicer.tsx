@@ -7,15 +7,12 @@ export const ordersSlicer = createSlice({
     value: [] as IOrder[],
   },
   reducers: {
-    setOrder : (state, action:PayloadAction<IOrder> ) => {
-
-        state.value.push(action.payload)
-            }
+    setOrder: (state, action: PayloadAction<IOrder>) => {
+      state.value.push(action.payload);
     },
   },
-);
+});
 
 export const { setOrder } = ordersSlicer.actions;
 
 export default ordersSlicer.reducer;
-

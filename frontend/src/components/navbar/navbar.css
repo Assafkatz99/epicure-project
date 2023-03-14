@@ -158,8 +158,8 @@ button:hover {
 
 .modalShoppingBag {
   position: absolute;
-top: 64px;
-right: 0;
+  top: 64px;
+  right: 0;
 }
 
 @media screen and (max-width: 500px) {
@@ -194,9 +194,7 @@ right: 0;
   }
   .menu-left.show {
     display: flex;
-
   }
-
 
   .menu-left-mobile {
     display: flex;

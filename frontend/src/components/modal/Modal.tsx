@@ -9,27 +9,22 @@ import { IOrder } from "../../typs/interfaces/slicersInterfaces";
 import "./Modal.css";
 
 const Modal: React.FC<IModalProps> = (props: IModalProps) => {
-  
   const [quantity, SetQuantity] = useState(1);
   const [selectedSide, SetSelectedSide] = useState("");
   const [selectedChanges, setSelectedChanges] = useState<string[]>([]);
-  
-  const dispatch = useDispatch()
 
-  const orders = useSelector(
-    (state: RootState) => state.orders.value
-  );
+  const dispatch = useDispatch();
+
+  const orders = useSelector((state: RootState) => state.orders.value);
 
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
- 
     if (event.target === event.currentTarget) {
       props.onclick();
       return;
     }
   };
-
 
   const handleSideChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     SetSelectedSide(event.target.value);
@@ -46,32 +41,30 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
       ]);
     } else {
       setSelectedChanges((prevSelectedChanges) =>
-      prevSelectedChanges.filter((item) => item !== value)
+        prevSelectedChanges.filter((item) => item !== value)
       );
     }
   };
-
 
   const [AddToBagClicked, SetAddToBagClicked] = useState(false);
 
   const handleAddToBagClick = () => {
     SetAddToBagClicked(true);
     const order: IOrder = {
-      id: props.dish?.id ,
+      id: props.dish?.id,
       name: props.dish?.name,
       img_url: props.dish?.img_url,
       changes: selectedChanges,
       price: props.dish?.price,
       sides: selectedSide,
-      quantity: quantity
-    }
-    dispatch(setOrder(order))
+      quantity: quantity,
+    };
+    dispatch(setOrder(order));
 
     setTimeout(() => {
       SetAddToBagClicked(false);
-
-    },3000)
-  }
+    }, 3000);
+  };
   useEffect(() => {
     console.log(orders);
   }, [AddToBagClicked]);
@@ -158,7 +151,8 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
                       <button
                         onClick={() => SetQuantity((prev) => prev - 1)}
                         disabled={quantity == 1}
-                        className={quantity === 1 ? "disabled" : ""}>
+                        className={quantity === 1 ? "disabled" : ""}
+                      >
                         –
                       </button>
                       <span>{quantity}</span>
@@ -168,7 +162,12 @@ const Modal: React.FC<IModalProps> = (props: IModalProps) => {
                     </div>
                   </div>
 
-                  <AddToBagButton  clicked={AddToBagClicked} onClick={handleAddToBagClick}>{AddToBagClicked ? "ADDED!" : "ADD TO BAG"}</AddToBagButton>
+                  <AddToBagButton
+                    clicked={AddToBagClicked}
+                    onClick={handleAddToBagClick}
+                  >
+                    {AddToBagClicked ? "ADDED!" : "ADD TO BAG"}
+                  </AddToBagButton>
                 </div>
               </>
             ) : (

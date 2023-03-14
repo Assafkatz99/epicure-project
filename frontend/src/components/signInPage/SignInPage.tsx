@@ -63,7 +63,8 @@ const SignInPage: React.FC = () => {
                 backgroundColor="grey"
                 onClick={() => {
                   loginClick();
-                }}>
+                }}
+              >
                 LOGIN
               </GenericButtons>
               <button className="forget_pass_button">Forget password?</button>
@@ -77,7 +78,8 @@ const SignInPage: React.FC = () => {
               backgroundColor="white"
               onClick={() => {
                 navigate("/sign-up");
-              }}>
+              }}
+            >
               SIGN UP
             </GenericButtons>
           </div>
@@ -87,15 +89,19 @@ const SignInPage: React.FC = () => {
             <div className="sign_in_div" style={{ height: "auto" }}>
               <div className="head_part">
                 <span>Hey {user.user.first_name}!</span>
-                <label>You are currently logged in to our system. <br/><br/> If you wish to log-out please use the button below</label>
+                <label>
+                  You are currently logged in to our system. <br />
+                  <br /> If you wish to log-out please use the button below
+                </label>
                 <GenericButtons
-              backgroundColor="grey"
-              onClick={() => {
-                sessionStorage.clear();
-                navigate("/");
-              }}>
-              LOG OUT
-            </GenericButtons>
+                  backgroundColor="grey"
+                  onClick={() => {
+                    sessionStorage.clear();
+                    navigate("/");
+                  }}
+                >
+                  LOG OUT
+                </GenericButtons>
               </div>
             </div>
           </>
