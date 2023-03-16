@@ -4,13 +4,47 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    gap:20px
+    gap:40px
+}
+.add_put_component_form{
+    all: inherit;
+}
+.add_put_component_main_div h3{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 100%;
+}
+.add_put_component_main_div section{
+    display: flex;
 }
 
-.add_put_component_main_div h3{
-    font-weight: bold;
-}
+
+.add_put_component_form input {
+    all: none;
+    border: unset;
+    border-bottom: 0.5px solid black;
+    padding: 2px 1px;
+    font-size: 15px;
+    width: 50%;
+  }
+  .add_put_component_form input:focus {
+    outline: none;
+  }
+
+  .add_put_component_form input::placeholder {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .add_put_component_form div{
+    width: 50%;
+  }
+  .add_put_component_form button{
+    align-self: center;
+  }
+
 

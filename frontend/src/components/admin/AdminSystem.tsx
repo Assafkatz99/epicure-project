@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { Clean_button } from "../../typs/buttons/Styled_buttons";
+import {
+  Clean_button,
+  GenericButtons,
+} from "../../typs/buttons/Styled_buttons";
 import Footer from "../homepage/hp-components/footer/Footer";
 import Navbar from "../navbar/Navbar";
 import ShoppingBag from "../navbar/navbar components/shopping bag component/ShoppingBag";
@@ -24,28 +27,53 @@ const AdminSystem: React.FC = () => {
       <section>
         <Navbar />
         <div className="admin_system_div">
-          <div className="admin_buttons">
+          <div style={{ position: "relative" }} className="admin_buttons">
             <Clean_button
               name="Chefs"
               bold={boldName === "Chefs"}
-              onClick={() => setBoldName("Chefs")}
-            >
+              onClick={() => setBoldName("Chefs")}>
               Chefs
             </Clean_button>
             <Clean_button
               name="Restaurants"
               bold={boldName === "Restaurants"}
-              onClick={() => setBoldName("Restaurants")}
-            >
+              onClick={() => setBoldName("Restaurants")}>
               Restaurants
             </Clean_button>
             <Clean_button
               name="Dishes"
               bold={boldName === "Dishes"}
-              onClick={() => setBoldName("Dishes")}
-            >
+              onClick={() => setBoldName("Dishes")}>
               Dishes
             </Clean_button>
+            <GenericButtons
+              onClick={()=>{
+                let action_type: "chef" | "rest" | "dish" = "dish" ;
+                switch (boldName) {
+                  case "Chefs":
+                    action_type = "chef"
+                    break;
+                  case "Restaurants":
+                    action_type = "rest"
+                    break;
+                  case "Dishes":
+                    action_type = "dish"
+                    break;
+                }
+                setModalComponent(
+                <AddPutComponent type={action_type} action={"Add"} />)
+                setShowModal(true)
+             }}
+
+              style={{
+                position: "absolute",
+                right: "0",
+                transform: " translate(-10px, -50%)",
+                top: "50%",
+              }}
+              backgroundColor="#29c821c1">
+              Create
+            </GenericButtons>
           </div>
           {boldName === "Chefs" && (
             <div className="Chefs_table tables">
@@ -74,8 +102,7 @@ const AdminSystem: React.FC = () => {
                             minWidth: "300px",
                             fontSize: "10px",
                             whiteSpace: "normal",
-                          }}
-                        >
+                          }}>
                           {chef.about}
                         </th>
                         <th>
@@ -86,8 +113,7 @@ const AdminSystem: React.FC = () => {
                               color: "blue",
                               fontSize: "12px",
                               textDecoration: "underline",
-                            }}
-                          >
+                            }}>
                             {chef.img_url}
                           </a>
                         </th>
@@ -103,8 +129,7 @@ const AdminSystem: React.FC = () => {
                                 />
                               );
                               setShowModal(true);
-                            }}
-                          >
+                            }}>
                             <img
                               style={{ width: "50px", height: "50px" }}
                               src="/assets/icons/admin/edit.svg"
@@ -114,15 +139,8 @@ const AdminSystem: React.FC = () => {
                         <th>
                           <button
                             onClick={() => {
-                              setModalComponent(
-                                <AddPutComponent
-                                  type={"chef"}
-                                  action={"Put"}
-                                />
-                              );
-                              setShowModal(true);
-                            }}
-                          >
+
+                            }}>
                             <img
                               style={{ width: "30px", height: "30px" }}
                               src="/assets/icons/admin/delete.svg"
@@ -162,8 +180,7 @@ const AdminSystem: React.FC = () => {
                             minWidth: "160px",
                             fontSize: "15px",
                             whiteSpace: "normal",
-                          }}
-                        >
+                          }}>
                           {rest.name}
                         </th>
                         <th>
@@ -175,8 +192,7 @@ const AdminSystem: React.FC = () => {
                             minWidth: "200px",
                             fontSize: "10px",
                             whiteSpace: "normal",
-                          }}
-                        >
+                          }}>
                           {rest.address}
                         </th>
                         <th>
@@ -187,7 +203,17 @@ const AdminSystem: React.FC = () => {
                         </th>
                         <th>{rest.opening_year}</th>
                         <th>
-                          <button onClick={() => {}}>
+                          <button
+                            onClick={() => {
+                              setModalComponent(
+                                <AddPutComponent
+                                  type={"rest"}
+                                  action={"Put"}
+                                  _id={"ididididididi"}
+                                />
+                              );
+                              setShowModal(true);
+                            }}>
                             <img
                               style={{ width: "50px", height: "50px" }}
                               src="/assets/icons/admin/edit.svg"
@@ -195,7 +221,10 @@ const AdminSystem: React.FC = () => {
                           </button>
                         </th>
                         <th>
-                          <button onClick={() => {}}>
+                          <button
+                            onClick={() => {
+
+                            }}>
                             <img
                               style={{ width: "30px", height: "30px" }}
                               src="/assets/icons/admin/delete.svg"
@@ -241,8 +270,7 @@ const AdminSystem: React.FC = () => {
                               color: "blue",
                               fontSize: "12px",
                               textDecoration: "underline",
-                            }}
-                          >
+                            }}>
                             {dish.img_url}
                           </a>
                         </th>
@@ -250,8 +278,7 @@ const AdminSystem: React.FC = () => {
                           style={{
                             fontSize: "13px",
                             whiteSpace: "normal",
-                          }}
-                        >
+                          }}>
                           {dish.changes.join(", ")}
                         </th>
                         <th
@@ -259,8 +286,7 @@ const AdminSystem: React.FC = () => {
                             minWidth: "300px",
                             fontSize: "10px",
                             whiteSpace: "normal",
-                          }}
-                        >
+                          }}>
                           {dish.ingredients.join(", ")}
                         </th>
                         <th>{dish.price}</th>
@@ -285,8 +311,7 @@ const AdminSystem: React.FC = () => {
                           style={{
                             fontSize: "13px",
                             whiteSpace: "normal",
-                          }}
-                        >
+                          }}>
                           {dish.sides.join(", ")}
                         </th>
                         <th>{dish.is_signature ? "True ✔️" : "False ❌"}</th>
@@ -294,15 +319,24 @@ const AdminSystem: React.FC = () => {
                           style={{
                             fontSize: "13px",
                             whiteSpace: "normal",
-                          }}
-                        >
+                          }}>
                           {Object.entries(dish.dishTiming)
                             .map((item) => (item[1] ? item[0] : ""))
                             .filter((item) => item !== "" && item !== "_id")
                             .join(", ")}
                         </th>
                         <th>
-                          <button onClick={() => {}}>
+                          <button
+                            onClick={() => {
+                              setModalComponent(
+                                <AddPutComponent
+                                  type={"dish"}
+                                  action={"Put"}
+                                  _id={"ididididididi"}
+                                />
+                              );
+                              setShowModal(true);
+                            }}>
                             <img
                               style={{ width: "50px", height: "50px" }}
                               src="/assets/icons/admin/edit.svg"
@@ -310,7 +344,10 @@ const AdminSystem: React.FC = () => {
                           </button>
                         </th>
                         <th>
-                          <button onClick={() => {}}>
+                          <button
+                            onClick={() => {
+
+                            }}>
                             <img
                               style={{ width: "30px", height: "30px" }}
                               src="/assets/icons/admin/delete.svg"
@@ -328,8 +365,7 @@ const AdminSystem: React.FC = () => {
             <>
               <div
                 className="backdrop"
-                onClick={() => setShowModal(false)}
-              ></div>
+                onClick={() => setShowModal(false)}></div>
               <div className="modalAddingEditing">{modalComponent}</div>
             </>
           )}
