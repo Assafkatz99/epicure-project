@@ -24,6 +24,7 @@ const chefsSlice = createSlice({
       .addCase(fetchChefs.fulfilled, (state, action) => {
         state.value = action.payload;
         state.initialValue = action.payload;
+
       })
       .addCase(fetchChefs.rejected, (state, action) => {
         console.log(action.error.message);

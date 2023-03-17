@@ -12,7 +12,7 @@ import AddPutComponent from "./admin component/AddPutComponent";
 import "./AdminSystem.css";
 
 const AdminSystem: React.FC = () => {
-  const [boldName, setBoldName] = useState("Chefs");
+  const [boldName, setBoldName] = useState("Restaurants");
   const chefs = useSelector((state: RootState) => state.chefs.value);
   const restaurants = useSelector(
     (state: RootState) => state.restaurants.value
@@ -47,30 +47,30 @@ const AdminSystem: React.FC = () => {
               Dishes
             </Clean_button>
             <GenericButtons
-              onClick={()=>{
-                let action_type: "chef" | "rest" | "dish" = "dish" ;
+              onClick={() => {
+                let action_type: "chef" | "rest" | "dish" = "dish";
                 switch (boldName) {
                   case "Chefs":
-                    action_type = "chef"
+                    action_type = "chef";
                     break;
                   case "Restaurants":
-                    action_type = "rest"
+                    action_type = "rest";
                     break;
                   case "Dishes":
-                    action_type = "dish"
+                    action_type = "dish";
                     break;
                 }
                 setModalComponent(
-                <AddPutComponent type={action_type} action={"Add"} />)
-                setShowModal(true)
-             }}
-
+                  <AddPutComponent type={action_type} action={"Add"} />
+                );
+                setShowModal(true);
+              }}
               style={{
                 position: "absolute",
                 right: "0",
                 transform: " translate(-10px, -50%)",
                 top: "50%",
-                padding: "10px"
+                padding: "10px",
               }}
               backgroundColor="#29c821c1">
               Create {boldName}
@@ -126,7 +126,17 @@ const AdminSystem: React.FC = () => {
                                 <AddPutComponent
                                   type={"chef"}
                                   action={"Put"}
-                                  _id={"ididididididi"}
+                                  data={{
+                                    _id: "640dac68401a06fafa17af35",
+                                    id: 4,
+                                    first_name: "4 Gordon",
+                                    last_name: "Ramsay",
+                                    about:
+                                      "Gordon Ramsay is a Scottish chef, restaurateur, and television personaliGordon Ramsay is a Scottish chef, restaurateur, and television personaliGordon Ramsay is a Scottish chef, restaurateur, and television personali",
+                                    img_url:
+                                      "https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2hlZnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+                                    restaurant_ids: [4],
+                                  }}
                                 />
                               );
                               setShowModal(true);
@@ -138,10 +148,7 @@ const AdminSystem: React.FC = () => {
                           </button>
                         </th>
                         <th>
-                          <button
-                            onClick={() => {
-
-                            }}>
+                          <button onClick={() => {}}>
                             <img
                               style={{ width: "30px", height: "30px" }}
                               src="/assets/icons/admin/delete.svg"
@@ -210,7 +217,20 @@ const AdminSystem: React.FC = () => {
                                 <AddPutComponent
                                   type={"rest"}
                                   action={"Put"}
-                                  _id={"ididididididi"}
+                                  data={{
+                                    _id: "640db5d1401a06fafa17af3e",
+                                    id: 1,
+                                    is_favorite: true,
+                                    name: "The French Laundry",
+                                    img_url:
+                                      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60",
+                                    hours: [9, 21],
+                                    address:
+                                      "6640 Washington St, Yountville, CA 94599",
+                                    rating: 5,
+                                    dish_ids: [1, 2, 1, 2, 4],
+                                    opening_year: 2023,
+                                  }}
                                 />
                               );
                               setShowModal(true);
@@ -222,10 +242,7 @@ const AdminSystem: React.FC = () => {
                           </button>
                         </th>
                         <th>
-                          <button
-                            onClick={() => {
-
-                            }}>
+                          <button onClick={() => {}}>
                             <img
                               style={{ width: "30px", height: "30px" }}
                               src="/assets/icons/admin/delete.svg"
@@ -333,7 +350,37 @@ const AdminSystem: React.FC = () => {
                                 <AddPutComponent
                                   type={"dish"}
                                   action={"Put"}
-                                  _id={"ididididididi"}
+                                  data={{
+                                    _id: "640db5fe401a06fafa17af4e",
+                                    id: 5,
+                                    name: "5 Spaghetti Bolognese",
+                                    img_url:
+                                      "https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHJlc3RhdXJhbnQlMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
+                                    ingredients: [
+                                      "Spaghetti",
+                                      "Ground Beef",
+                                      "Tomato Sauce",
+                                      "Onions",
+                                      "Garlic",
+                                      "Red Wine",
+                                    ],
+                                    price: 13,
+                                    icons: {
+                                      isSpicy: false,
+                                      isVegan: false,
+                                      isVegetarian: false,
+                                      _id: "64147ae585bc03a652fc43f8",
+                                    },
+                                    sides: ["Garlic Bread"],
+                                    changes: [],
+                                    is_signature: false,
+                                    dishTiming: {
+                                      breakfast: true,
+                                      lunch: true,
+                                      dinner: false,
+                                      _id: "64147ae585bc03a652fc43f9",
+                                    },
+                                  }}
                                 />
                               );
                               setShowModal(true);
@@ -345,10 +392,7 @@ const AdminSystem: React.FC = () => {
                           </button>
                         </th>
                         <th>
-                          <button
-                            onClick={() => {
-
-                            }}>
+                          <button onClick={() => {}}>
                             <img
                               style={{ width: "30px", height: "30px" }}
                               src="/assets/icons/admin/delete.svg"

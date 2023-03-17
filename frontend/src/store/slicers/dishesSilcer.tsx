@@ -50,6 +50,7 @@ export const dishesSlice = createSlice({
       .addCase(fetchDishes.fulfilled, (state, action) => {
         state.value = action.payload;
         state.initialValue = action.payload;
+
       })
       .addCase(fetchDishes.rejected, (state, action) => {
         console.log(action.error.message);
