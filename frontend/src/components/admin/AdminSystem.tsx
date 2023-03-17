@@ -70,9 +70,10 @@ const AdminSystem: React.FC = () => {
                 right: "0",
                 transform: " translate(-10px, -50%)",
                 top: "50%",
+                padding: "10px"
               }}
               backgroundColor="#29c821c1">
-              Create
+              Create {boldName}
             </GenericButtons>
           </div>
           {boldName === "Chefs" && (
