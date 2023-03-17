@@ -51,7 +51,7 @@ export const userSignIn = async (req: Request, res: Response) => {
           expiresIn: "2h",
         }
       );
-      
+
       return res.status(201).json({ user: user, token: token });
     }
     res.send("Invalid Credentials");

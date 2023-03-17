@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { GenericButtons } from "../../../typs/buttons/Styled_buttons";
 import {
@@ -127,7 +128,20 @@ const AddPutComponent: React.FC<IAddPutComponent> = (props) => {
       {props.type === "chef" && (
         <>
           <h3>{data ? "Edit a" : "Create new"} chef</h3>
-          <form className="add_put_component_form" onSubmit={() => {}}>
+          <form
+            className="add_put_component_form"
+            onSubmit={async (event) => {
+              event.preventDefault()
+              try {
+                const response = await axios.post(
+                  "http://localhost:8000/api/chefs",
+                  chefInformation );
+                  console.log(response)
+
+              } catch (error: any) {
+                alert(error.response.data);
+              }
+            }}>
             <section>
               <div>First Name</div>
               <input

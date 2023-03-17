@@ -11,9 +11,9 @@ export interface IChef {
 }
 
 export const chefSchema = new Schema<IChef>({
-  id: { type: Number, required: true },
-  first_name: { type: String, required: true },
-  last_name: { type: String, required: true },
+  id: { type: Number },
+  first_name: { type: String },
+  last_name: { type: String},
   about: { type: String },
   img_url: { type: String },
   restaurant_ids: [{ type: Number }],
