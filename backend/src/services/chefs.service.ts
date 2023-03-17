@@ -27,6 +27,8 @@ export const createChef = async (chef: any) => {
       restaurant_ids: chef.restaurant_ids
     });
 
+
+
     console.log("chef created");
   } catch (err) {
     console.log(err);

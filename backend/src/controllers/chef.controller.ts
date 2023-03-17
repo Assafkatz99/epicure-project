@@ -10,11 +10,12 @@ export const getAllChefs = async (req: Request, res: Response) => {
     throw err;
   }
 };
+
 export const createNewChef = async (req: Request, res: Response) => {
 
   try {
-    await createChef(req.body);
-    return res.status(200).json(req.body);
+    const new_chef = await createChef(req.body);
+    return res.status(200).json(new_chef);
   } catch (err: any) {
     console.log(err);
     throw err;

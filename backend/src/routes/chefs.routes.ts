@@ -1,11 +1,10 @@
 import express, { Request, Response } from "express";
-import { getAllChefs } from "../controllers/chef.controller";
-import { createChef } from "../services/chefs.service";
+import { getAllChefs , createNewChef } from "../controllers/chef.controller";
 
 const chefRouter = express.Router();
 
 chefRouter.get("/",getAllChefs);
-chefRouter.post("/", createChef)
+chefRouter.post("/", createNewChef)
 chefRouter.put("/",)
 
 
