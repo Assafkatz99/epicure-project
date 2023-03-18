@@ -14,11 +14,11 @@ export interface IRestaurant {
 }
 
 export const restaurantSchema = new Schema<IRestaurant>({
-  id: { type: Number, required: true },
-  name: { type: String, required: true },
-  img_url: { type: String, required: true },
+  id: { type: Number},
+  name: { type: String },
+  img_url: { type: String },
   hours: [{ type: Number }],
-  is_favorite: { type: Boolean, required: true },
+  is_favorite: { type: Boolean },
   address: { type: String },
   rating: { type: Number },
   dish_ids: [{ type: Number }],

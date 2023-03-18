@@ -20,6 +20,7 @@ const AddPutComponent: React.FC<IAddPutComponent> = (props) => {
   // chef info
 
   const defaultChefInformation = {
+    id:  props.action === "Put" && props.type === "chef" ? data.id : "",
     first_name:
       props.action === "Put" && props.type === "chef" ? data.first_name : "",
     last_name:
@@ -52,6 +53,7 @@ const AddPutComponent: React.FC<IAddPutComponent> = (props) => {
   // restaurant info
 
   const [restaurantInformation, setRestaurantInformation] = useState({
+    id: props.action === "Put" && props.type === "rest" ? data.id : "",
     name: props.action === "Put" && props.type === "rest" ? data.name : "",
     img_url:
       props.action === "Put" && props.type === "rest" ? data.img_url : "",
@@ -76,6 +78,7 @@ const AddPutComponent: React.FC<IAddPutComponent> = (props) => {
   // dish info
 
   const [dishInformation, setDishInformation] = useState({
+    id: props.action === "Put" && props.type === "dish" ? data.id : "",
     name: props.action === "Put" && props.type === "dish" ? data.name : "",
     img_url:
       props.action === "Put" && props.type === "dish" ? data.img_url : "",
@@ -132,15 +135,35 @@ const AddPutComponent: React.FC<IAddPutComponent> = (props) => {
             className="add_put_component_form"
             onSubmit={async (event) => {
               event.preventDefault()
-              try {
-                const response = await axios.post(
-                  "http://localhost:8000/api/chefs",
-                  chefInformation );
-                  console.log(response)
 
-              } catch (error: any) {
-                alert(error.response.data);
+
+              switch (props.action){
+                case "Add":
+                  try {
+                    const response = await axios.post(
+                      "http://localhost:8000/api/chefs",
+                      chefInformation );
+                      console.log(response)
+
+                  } catch (error: any) {
+                    alert(error.response.data);
+                  }
+                break;
+
+                case "Put":
+                  try {
+                    const response = await axios.put(
+                      "http://localhost:8000/api/chefs",
+                      chefInformation );
+                      console.log(response)
+
+                  } catch (error: any) {
+                    alert(error.response.data);
+                  }
+                break;
               }
+
+              window.location.reload()
             }}>
             <section>
               <div>First Name</div>
@@ -199,9 +222,38 @@ const AddPutComponent: React.FC<IAddPutComponent> = (props) => {
           <h3>{data ? "Edit a" : "Create new"} restaurant</h3>
           <form
             className="add_put_component_form"
-            onSubmit={(event) => {
-              event?.preventDefault();
-            }}>
+            onSubmit={
+              async (event) => {
+                event.preventDefault()
+                switch (props.action){
+                  case "Add":
+                    try {
+                      const response = await axios.post(
+                        "http://localhost:8000/api/restaurants",
+                        restaurantInformation );
+                        console.log(response)
+
+                    } catch (error: any) {
+                      alert(error.response.data);
+                    }
+                  break;
+
+                  case "Put":
+                    try {
+                      const response = await axios.put(
+                        "http://localhost:8000/api/restaurants",
+                        restaurantInformation );
+                        console.log(response)
+
+                    } catch (error: any) {
+                      alert(error.response.data);
+                    }
+                  break;
+                }
+
+                window.location.reload()
+              }
+            }>
             <section>
               <div>Name</div>
               <input
@@ -333,9 +385,38 @@ const AddPutComponent: React.FC<IAddPutComponent> = (props) => {
           <h3>{data ? "Edit a" : "Create new"} dish</h3>
           <form
             className="add_put_component_form"
-            onSubmit={(event) => {
-              event?.preventDefault();
-            }}>
+            onSubmit={
+              async (event) => {
+                event.preventDefault()
+                switch (props.action){
+                  case "Add":
+                    try {
+                      const response = await axios.post(
+                        "http://localhost:8000/api/dishes",
+                        dishInformation );
+                        console.log(response)
+
+                    } catch (error: any) {
+                      alert(error.response.data);
+                    }
+                  break;
+
+                  case "Put":
+                    try {
+                      const response = await axios.put(
+                        "http://localhost:8000/api/dishes",
+                        dishInformation );
+                        console.log(response)
+
+                    } catch (error: any) {
+                      alert(error.response.data);
+                    }
+                  break;
+                }
+
+                window.location.reload()
+              }
+            }>
             <section>
               <div>Name</div>
               <input

@@ -13,10 +13,12 @@ export const getChefs = async () => {
 
 
 export const createChef = async (chef: any) => {
-  console.log(chef)
   try {
-    const lastChef = await ChefsModel.find({}, { id: 1 }).sort({ id: -1 }).limit(1);
-    const nextId = lastChef.length > 0 ? lastChef[0].id + 1 : 1;
+    const usedIds = new Set(await ChefsModel.distinct('id'));
+    let nextId = 1;
+    while (usedIds.has(nextId)) {
+      nextId++;
+    }
 
     await ChefsModel.create({
       id: nextId,
@@ -27,9 +29,35 @@ export const createChef = async (chef: any) => {
       restaurant_ids: chef.restaurant_ids
     });
 
-
-
     console.log("chef created");
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+};
+
+export const editChef = async (chef: any) => {
+  try {
+    await ChefsModel.updateOne({id: chef.id},
+    {  id: chef.id,
+      first_name: chef.first_name,
+      last_name: chef.last_name,
+      about: chef.about,
+      img_url: chef.img_url,
+      restaurant_ids: chef.restaurant_ids}
+      );
+
+    console.log("chef updated");
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+};
+export const deleteChef = async (chef_id: any) => {
+  try {
+    await ChefsModel.deleteOne({id: chef_id})
+
+    console.log("chef deleted");
   } catch (err) {
     console.log(err);
     throw err;

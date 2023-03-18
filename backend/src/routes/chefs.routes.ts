@@ -1,11 +1,12 @@
 import express, { Request, Response } from "express";
-import { getAllChefs , createNewChef } from "../controllers/chef.controller";
+import { getAllChefs , createNewChef, editExistingChef, deleteExistingChef } from "../controllers/chef.controller";
 
 const chefRouter = express.Router();
 
 chefRouter.get("/",getAllChefs);
 chefRouter.post("/", createNewChef)
-chefRouter.put("/",)
+chefRouter.put("/", editExistingChef)
+chefRouter.post("/delete", deleteExistingChef)
 
 
 export default chefRouter;
