@@ -12,7 +12,7 @@ import AddPutComponent from "./admin component/AddPutComponent";
 import "./AdminSystem.css";
 
 const AdminSystem: React.FC = () => {
-  const [boldName, setBoldName] = useState("Dishes");
+  const [boldName, setBoldName] = useState("Restaurants");
   const chefs = useSelector((state: RootState) => state.chefs.value);
   const restaurants = useSelector(
     (state: RootState) => state.restaurants.value

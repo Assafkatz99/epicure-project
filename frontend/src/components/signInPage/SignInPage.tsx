@@ -94,6 +94,14 @@ const SignInPage: React.FC = () => {
                   <br /> If you wish to log-out please use the button below
                 </label>
                 <GenericButtons
+                  backgroundColor="white"
+                  onClick={() => {
+                    navigate("/admin");
+                  }}
+                >
+                  ADMIN
+                </GenericButtons>
+                <GenericButtons
                   backgroundColor="grey"
                   onClick={() => {
                     sessionStorage.clear();
