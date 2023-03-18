@@ -16,6 +16,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 5px;
 }
 .upper_part_dish_card {
@@ -49,4 +50,9 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
+}
+
+.order_changes_span{
+  font-size: 15px;
+  width: 80%;
 }

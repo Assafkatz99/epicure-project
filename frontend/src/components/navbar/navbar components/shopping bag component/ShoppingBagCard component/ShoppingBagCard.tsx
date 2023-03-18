@@ -32,7 +32,7 @@ const ShoppingBagCard: React.FC<ShoppingBagCardProps> = (props) => {
             <span>₪{props.order.price}.00</span>
           </section>
         </div>
-        <span>{orderChanges}</span>
+        <span className="order_changes_span">{orderChanges}</span>
       </div>
       <h1
         className="right_button_price"
